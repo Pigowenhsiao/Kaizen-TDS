@@ -1,0 +1,70 @@
+SELECT * FROM (
+    SELECT
+        HDR.PARTNUMBER,
+        TEQ.DEVICENAME || TEQ.DEVICESERIALNUMBER AS "EQUIPMENT",
+        HDR.SERIALNUMBER,
+        HDR.STARTTIME,
+        HDR.OPERATORID,
+        OPS.OPERATIONSTEPNAME || '.' || PAR.PARAMETERNAME AS STEP_AND_PARAMETER,
+        MSD.VALUE
+    FROM
+        TDSMFG.TESTHEADER           HDR,
+        TDSMFG.TESTHEADERSTEP       HDS,
+        TDSMFG.OPERATIONSTEP        OPS,
+        TDSMFG.MEASUREMENTPARAMETER MSP,
+        TDSMFG.MEASUREMENT          MSD,
+        TDSMFG.PARAMETER            PAR,
+        TDSMFG.TESTEQUIPMENT        TEQ
+    WHERE 1=1
+        AND HDS.TESTHEADERID            = HDR.TESTHEADERID
+        AND HDR.OPERATIONID             = OPS.OPERATIONID
+        AND HDS.TESTHEADERSTEPID        = MSP.TESTHEADERSTEPID
+        AND MSP.MEASUREMENTPARAMETERID  = MSD.MEASUREMENTPARAMETERID
+        AND MSP.PARAMETERID             = PAR.PARAMETERID
+        AND TEQ.TESTHEADERID(+)         = HDR.TESTHEADERID
+        AND HDR.OPERATION               = 'GRATING_EB-Duty'
+)
+PIVOT (
+        MAX(VALUE) FOR STEP_AND_PARAMETER IN (
+            'Duty1.A' AS "Duty1.A",
+            'Duty1.B' AS "Duty1.B",
+            'Duty1.C' AS "Duty1.C",
+            'Duty2.A' AS "Duty2.A",
+            'Duty2.B' AS "Duty2.B",
+            'Duty2.C' AS "Duty2.C",
+            'Duty3.A' AS "Duty3.A",
+            'Duty3.B' AS "Duty3.B",
+            'Duty3.C' AS "Duty3.C",
+            'DutyAve.Average' AS "DutyAve.Average",
+            'DutyAve.3sigma' AS "DutyAve.3sigma",
+            'SORTED_DATA.STARTTIME_SORTED' AS "SORTED_DATA.STARTTIME_SORTED",
+            'SORTED_DATA.SORTNUMBER' AS "SORTED_DATA.SORTNUMBER" 
+        )
+)Int_Data
+LEFT JOIN
+    (
+        SELECT
+            MAX(CASE OPERATIONSTEPNAME || '_' || PARAMETERNAME WHEN 'SORTED_DATA_LotNumber_5' THEN VALUESTRING END) AS "FIVE_SERIALNUMBER",
+            MAX(CASE OPERATIONSTEPNAME || '_' || PARAMETERNAME WHEN 'SORTED_DATA_LotNumber_9' THEN VALUESTRING END) AS "NINE_SERIALNUMBER"
+        FROM
+            TDSMFG.TESTHEADER           HDR,
+            TDSMFG.TESTHEADERSTEP       HDS,
+            TDSMFG.OPERATIONSTEP        OPS,
+            TDSMFG.PARAMETER            PAR,
+            TDSMFG.STRINGPARAMETER      STP,
+            TDSMFG.STRINGMEASUREMENT    SMM
+        WHERE 1=1
+            AND HDR.TESTHEADERID            = HDS.TESTHEADERID
+            AND HDS.OPERATIONSTEPID         = OPS.OPERATIONSTEPID
+            AND HDS.TESTHEADERSTEPID        = STP.TESTHEADERSTEPID
+            AND STP.STRINGPARAMETERID       = SMM.STRINGPARAMETERID
+            AND PAR.OPERATIONSTEPID         = OPS.OPERATIONSTEPID
+            AND PAR.PARAMETERID             = STP.PARAMETERID
+            AND HDR.OPERATION               ='GRATING_EB-Duty'
+        GROUP BY
+            HDR.SERIALNUMBER
+    )String_Data
+    ON Int_Data.SERIALNUMBER = String_Data."FIVE_SERIALNUMBER"
+ORDER BY
+    Int_Data."SORTED_DATA.STARTTIME_SORTED",
+    STARTTIME

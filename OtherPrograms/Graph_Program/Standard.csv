@@ -1,0 +1,375 @@
+SQLファイル名(.sqlを除く),x,y,対象期間項目名,規格適用開始期間(含む),規格適用終了期間(含む),品名(指定しない場合は'-'),規格Min,アラームMin,アラームMax,規格Max,hue(色分けを行わない場合は-),グラフタイトル,グラフタイトル,Y軸のLog表記を行うのであれば、TRUE,CHECK
+N-electrode_Polish_InitialWaferThickness,STARTTIME,Thickness_Average,STARTTIME,12/1/2021,1/1/2100,-,,,,,PARTNUMBER,n電極形成 裏面研磨 初期ウェハ厚,n電極形成 裏面研磨 初期ウェハ厚,,OK
+N-electrode_Polish_WaxThickness,STARTTIME,Thickness_Average,STARTTIME,1/1/2010,1/1/2100,-,,,,,PARTNUMBER,n電極形成 裏面研磨 ワックス厚,n電極形成 裏面研磨 ワックス厚,,OK
+N-electrode_Polish_RoughPolishedThickness,STARTTIME,Thickness_Average,STARTTIME,1/1/2010,1/1/2100,-,,,,,PARTNUMBER,n電極形成 裏面研磨 粗研磨後ウェハ厚,n電極形成 裏面研磨 粗研磨後ウェハ厚,,OK
+N-electrode_Polish_MirrorPolishedThickness,STARTTIME,Thickness_Average,STARTTIME,1/1/2010,1/1/2100,-,86,88,100,102,PARTNUMBER,n電極形成 裏面研磨 鏡面研磨後ウェハ厚,n電極形成 裏面研磨 鏡面研磨後ウェハ厚,,OK
+N-electrode_Polish_EtchedThickness,STARTTIME,Thickness_Average,STARTTIME,1/1/2010,1/1/2100,-,77,78,96,97,PARTNUMBER,n電極形成 裏面研磨 歪取りエッチング後ウェハ厚,n電極形成 裏面研磨 歪取りエッチング後ウェハ厚,,OK
+P-electrode_EML_Deposition_Thickness,STARTTIME,Thickness.Thickness,STARTTIME,1/1/2010,1/1/2100,-,1.03,1.055,1.175,1.27,-,p電極形成 膜厚(EML),p電極形成 膜厚(EML),,OK
+P-electrode_DML_Deposition_Thickness,STARTTIME,Thickness.Thickness,STARTTIME,1/1/2010,1/1/2100,-,0.467,0.48,0.62,0.633,-,p電極形成 膜厚(DML),p電極形成 膜厚(DML),,OK
+P-electrode_EML_Deposition_Stress,STARTTIME,Stress_Stress,STARTTIME,1/1/2010,1/1/2100,-,,,,,-,p電極形成 張力(EML),p電極形成 張力(EML),,OK
+P-electrode_DML_Deposition_Stress,STARTTIME,Stress.Stress,STARTTIME,1/1/2010,1/1/2100,-,-0.61,-0.73,-1.19,-1.3,-,p電極形成 張力(DML),p電極形成 張力(DML),,OK
+N-electrode_EML_Deposition_Thickness,STARTTIME,Thickness.Thickness,STARTTIME,1/1/2010,1/1/2100,-,2700,2800,3600,3700,-,n電極形成 膜厚(EML),n電極形成 膜厚(EML),,OK
+N-electrode_DML_Deposition_Thickness_25G,STARTTIME,Thickness.Thickness,STARTTIME,1/1/2010,1/1/2100,-,2700,2800,3600,3700,-,n電極形成 膜厚(25G),n電極形成 膜厚(25G),,OK
+N-electrode_DML_Deposition_Thickness_10G,STARTTIME,Thickness.Thickness,STARTTIME,1/1/2010,1/1/2100,-,4700,4900,6500,6700,-,n電極形成 膜厚(10G),n電極形成 膜厚(10G),,OK
+P-electrode_Deposition_Au-WetEtching,STARTTIME,Width_Ave,STARTTIME,1/1/2010,1/1/2100,-,1.5,1.8,3.6,4.5,-,電極形成 Auウェット サイドエッチ量,電極形成 Auウェット サイドエッチ量,,OK
+GRATING_EB-Duty,STARTTIME,DutyAve.Average,STARTTIME,1/1/2010,1/1/2100,-,0.43,,0.487,0.49,-,回折格子形成 EB露光 Duty(EML),回折格子形成 EB露光 Duty(EML),,OK
+GRATING_DML-EB-Duty,STARTTIME,DutyAve.Average,STARTTIME,1/1/2010,1/1/2100,HL1362,0.42,0.423,0.517,0.52,-,回折格子形成 EB露光 Duty_HL1362,回折格子形成 EB露光 Duty_HL1362,,OK
+GRATING_DML-EB-Duty,STARTTIME,DutyAve.Average,STARTTIME,1/1/2010,1/1/2100,HL1363,0.42,0.423,0.517,0.52,-,回折格子形成 EB露光 Duty_HL1363,回折格子形成 EB露光 Duty_HL1363,,OK
+GRATING_DML-EB-Duty,STARTTIME,DutyAve.Average,STARTTIME,1/1/2010,1/1/2100,HL1364,0.42,0.423,0.517,0.52,-,回折格子形成 EB露光 Duty_HL1364,回折格子形成 EB露光 Duty_HL1364,,OK
+GRATING_DML-EB-Duty,STARTTIME,DutyAve.Average,STARTTIME,1/1/2010,1/1/2100,HL13BE,0.32,0.323,0.417,0.42,-,回折格子形成 EB露光 Duty_HL13BE,回折格子形成 EB露光 Duty_HL13BE,,OK
+GRATING_DML-EB-Duty,STARTTIME,DutyAve.Average,STARTTIME,1/1/2010,1/1/2100,HL13BFCP,0.32,0.323,0.417,0.42,-,回折格子形成 EB露光 Duty_HL13BFCP,回折格子形成 EB露光 Duty_HL13BFCP,,OK
+GRATING_DML-EB-Duty,STARTTIME,DutyAve.Average,STARTTIME,1/1/2010,1/1/2100,HL13BS,0.32,0.323,0.417,0.42,-,回折格子形成 EB露光 Duty_HL13BS,回折格子形成 EB露光 Duty_HL13BS,,OK
+GRATING_DML-EB-Duty,STARTTIME,DutyAve.Average,STARTTIME,1/1/2010,1/1/2100,HL13CG,0.42,0.423,0.517,0.52,-,回折格子形成 EB露光 Duty_HL13CG,回折格子形成 EB露光 Duty_HL13CG,,OK
+GRATING_DML-EB-Duty,STARTTIME,DutyAve.Average,STARTTIME,1/1/2010,1/1/2100,HTL139S,0.42,0.423,0.517,0.52,-,回折格子形成 EB露光 Duty_HTL139S,回折格子形成 EB露光 Duty_HTL139S,,OK
+MESA_EB-Width,STARTTIME,WidthAve.Average,STARTTIME,1/1/2010,1/1/2100,HL1362,1.59,1.6,1.68,1.69,-,メサ形成 MESAEB描画ホト パターン幅_HL1362,メサ形成 MESAEB描画ホト パターン幅_HL1362,,OK
+MESA_EB-Width,STARTTIME,WidthAve.Average,STARTTIME,1/1/2010,1/1/2100,HL1363,1.59,1.6,1.68,1.69,-,メサ形成 MESAEB描画ホト パターン幅_HL1363,メサ形成 MESAEB描画ホト パターン幅_HL1363,,OK
+MESA_EB-Width,STARTTIME,WidthAve.Average,STARTTIME,1/1/2010,1/1/2100,HL1364,1.59,1.6,1.68,1.69,-,メサ形成 MESAEB描画ホト パターン幅_HL1364,メサ形成 MESAEB描画ホト パターン幅_HL1364,,OK
+MESA_EB-Width,STARTTIME,WidthAve.Average,STARTTIME,1/1/2010,7/25/2021,HL13BE,1.51,1.52,1.59,1.61,-,メサ形成 MESAEB描画ホト パターン幅_HL13BE,メサ形成 MESAEB描画ホト パターン幅_HL13BE,,OK
+MESA_EB-Width,STARTTIME,WidthAve.Average,STARTTIME,9/2/2021,1/1/2100,HL13BE,1.49,1.5,1.58,1.59,-,メサ形成 MESAEB描画ホト パターン幅_HL13BE,メサ形成 MESAEB描画ホト パターン幅_HL13BE,,OK
+MESA_EB-Width,STARTTIME,WidthAve.Average,STARTTIME,1/1/2010,7/25/2021,HL13BFCP,1.51,1.52,1.59,1.61,-,メサ形成 MESAEB描画ホト パターン幅_HL13BFCP,メサ形成 MESAEB描画ホト パターン幅_HL13BFCP,,OK
+MESA_EB-Width,STARTTIME,WidthAve.Average,STARTTIME,9/2/2021,1/1/2100,HL13BFCP,1.49,1.5,1.58,1.59,-,メサ形成 MESAEB描画ホト パターン幅_HL13BFCP,メサ形成 MESAEB描画ホト パターン幅_HL13BFCP,,OK
+MESA_EB-Width,STARTTIME,WidthAve.Average,STARTTIME,1/1/2010,7/25/2021,HL13BS,1.51,1.52,1.59,1.61,-,メサ形成 MESAEB描画ホト パターン幅_HL13BS,メサ形成 MESAEB描画ホト パターン幅_HL13BS,,OK
+MESA_EB-Width,STARTTIME,WidthAve.Average,STARTTIME,9/2/2021,1/1/2100,HL13BS,1.49,1.5,1.58,1.59,-,メサ形成 MESAEB描画ホト パターン幅_HL13BS,メサ形成 MESAEB描画ホト パターン幅_HL13BS,,OK
+MESA_EB-Width,STARTTIME,WidthAve.Average,STARTTIME,1/1/2010,7/25/2021,HL13CG,1.51,1.52,1.59,1.61,-,メサ形成 MESAEB描画ホト パターン幅_HL13CG,メサ形成 MESAEB描画ホト パターン幅_HL13CG,,OK
+MESA_EB-Width,STARTTIME,WidthAve.Average,STARTTIME,9/2/2021,1/1/2100,HL13CG,1.49,1.5,1.58,1.59,-,メサ形成 MESAEB描画ホト パターン幅_HL13CG,メサ形成 MESAEB描画ホト パターン幅_HL13CG,,OK
+MESA_EB-Width,STARTTIME,WidthAve.Average,STARTTIME,1/1/2010,1/1/2100,HTL139S,1.59,1.6,1.68,1.69,-,メサ形成 MESAEB描画ホト パターン幅_HTL139S,メサ形成 MESAEB描画ホト パターン幅_HTL139S,,OK
+MESA_EB-Width,STARTTIME,WidthAve.Average,STARTTIME,1/1/2010,5/28/2021,HL13B4,1.42,1.43,1.51,1.52,-,メサ形成 MESAEB描画ホト パターン幅_HL13B4,メサ形成 MESAEB描画ホト パターン幅_HL13B4,,OK
+MESA_EB-Width,STARTTIME,WidthAve.Average,STARTTIME,5/29/2021,1/1/2100,HL13B4,1.75,1.76,1.84,1.85,-,メサ形成 MESAEB描画ホト パターン幅_HL13B4,メサ形成 MESAEB描画ホト パターン幅_HL13B4,,OK
+MESA_EB-Width,STARTTIME,WidthAve.Average,STARTTIME,1/1/2010,5/28/2021,HL13B5,1.42,1.43,1.51,1.52,-,メサ形成 MESAEB描画ホト パターン幅_HL13B5,メサ形成 MESAEB描画ホト パターン幅_HL13B5,,OK
+MESA_EB-Width,STARTTIME,WidthAve.Average,STARTTIME,5/29/2021,1/1/2100,HL13B5,1.75,1.76,1.84,1.85,-,メサ形成 MESAEB描画ホト パターン幅_HL13B5,メサ形成 MESAEB描画ホト パターン幅_HL13B5,,OK
+MESA_EB-Width,STARTTIME,WidthAve.Average,STARTTIME,1/1/2010,1/1/2100,HL13B6,1.75,1.76,1.84,1.85,-,メサ形成 MESAEB描画ホト パターン幅_HL13B6,メサ形成 MESAEB描画ホト パターン幅_HL13B6,,OK
+MESA_EB-Width,STARTTIME,WidthAve.Average,STARTTIME,1/1/2010,1/1/2100,HL15B5,1.75,1.76,1.84,1.85,-,メサ形成 MESAEB描画ホト パターン幅_HL15B5,メサ形成 MESAEB描画ホト パターン幅_HL15B5,,OK
+MESA_EB-Width,STARTTIME,WidthAve.Average,STARTTIME,1/1/2010,1/1/2100,HTL13B2,1.42,1.43,1.51,1.52,-,メサ形成 MESAEB描画ホト パターン幅_HTL13B2,メサ形成 MESAEB描画ホト パターン幅_HTL13B2,,OK
+MESA_EB-Width,STARTTIME,WidthAve.Average,STARTTIME,1/1/2010,1/1/2100,HTL13D1,1.42,1.43,1.51,1.52,-,メサ形成 MESAEB描画ホト パターン幅_HTL13D1,メサ形成 MESAEB描画ホト パターン幅_HTL13D1,,OK
+GRATING_CVD_EtchingRate,STARTTIME,Rate.Rate_Ave,STARTTIME,1/1/2010,1/1/2100,-,25,27,38,40,DryEtch,メサ形成 SiO2ドライエッチングレート,メサ形成 SiO2ドライエッチングレート,,OK
+GRATING_CVD_EtchingRate,STARTTIME,Time.Time,STARTTIME,1/1/2010,1/1/2100,-,4,,,6,DryEtch,メサ形成 SiO2ドライエッチング時間,メサ形成 SiO2ドライエッチング時間,,OK
+GRATING_CVD_Duty,STARTTIME,Average.Duty,STARTTIME,1/1/2010,1/1/2100,HL1362,,,,,-,回折格子形成 回折格子CVDエッチ Duty 面内分布平均_HL1362,回折格子形成 回折格子CVDエッチ Duty 面内分布平均_HL1362,,OK
+GRATING_CVD_Duty,STARTTIME,Average.Duty,STARTTIME,1/1/2010,1/1/2100,HL1363,0.34,,,0.44,-,回折格子形成 回折格子CVDエッチ Duty 面内分布平均_HL1363,回折格子形成 回折格子CVDエッチ Duty 面内分布平均_HL1363,,OK
+GRATING_CVD_Duty,STARTTIME,Average.Duty,STARTTIME,1/1/2010,1/1/2100,HL1364,,,,,-,回折格子形成 回折格子CVDエッチ Duty 面内分布平均_HL1364,回折格子形成 回折格子CVDエッチ Duty 面内分布平均_HL1364,,OK
+GRATING_CVD_Duty,STARTTIME,Average.Duty,STARTTIME,1/1/2010,1/1/2100,HL13BE,0.34,,,0.44,-,回折格子形成 回折格子CVDエッチ Duty 面内分布平均_HL13BE,回折格子形成 回折格子CVDエッチ Duty 面内分布平均_HL13BE,,OK
+GRATING_CVD_Duty,STARTTIME,Average.Duty,STARTTIME,1/1/2010,1/1/2100,HL13BFCP,0.34,,,0.44,-,回折格子形成 回折格子CVDエッチ Duty 面内分布平均_HL13BFCP,回折格子形成 回折格子CVDエッチ Duty 面内分布平均_HL13BFCP,,OK
+GRATING_CVD_Duty,STARTTIME,Average.Duty,STARTTIME,1/1/2010,1/1/2100,HL13BS,0.34,,,0.44,-,回折格子形成 回折格子CVDエッチ Duty 面内分布平均_HL13BS,回折格子形成 回折格子CVDエッチ Duty 面内分布平均_HL13BS,,OK
+GRATING_CVD_Duty,STARTTIME,Average.Duty,STARTTIME,1/1/2010,1/1/2100,HL13CG,0.41,,,0.51,-,回折格子形成 回折格子CVDエッチ Duty 面内分布平均_HL13CG,回折格子形成 回折格子CVDエッチ Duty 面内分布平均_HL13CG,,OK
+GRATING_CVD_Duty,STARTTIME,Average.Duty,STARTTIME,1/1/2010,1/1/2100,HTL139S,0.35,,,0.45,-,回折格子形成 回折格子CVDエッチ Duty 面内分布平均_HTL139S,回折格子形成 回折格子CVDエッチ Duty 面内分布平均_HTL139S,,OK
+GRATING_CVD_Duty,STARTTIME,Average.Duty,STARTTIME,1/1/2010,1/1/2100,HL13B4,0.35,,,0.45,-,回折格子形成 回折格子CVDエッチ Duty 面内分布平均_HL13B4,回折格子形成 回折格子CVDエッチ Duty 面内分布平均_HL13B4,,OK
+GRATING_CVD_Duty,STARTTIME,Average.Duty,STARTTIME,1/1/2010,1/1/2100,HL13B5,0.35,,,0.45,-,回折格子形成 回折格子CVDエッチ Duty 面内分布平均_HL13B5,回折格子形成 回折格子CVDエッチ Duty 面内分布平均_HL13B5,,OK
+GRATING_CVD_Duty,STARTTIME,Average.Duty,STARTTIME,1/1/2010,1/1/2100,HL13B6,0.35,,,0.45,-,回折格子形成 回折格子CVDエッチ Duty 面内分布平均_HL13B6,回折格子形成 回折格子CVDエッチ Duty 面内分布平均_HL13B6,,OK
+GRATING_CVD_Duty,STARTTIME,Average.Duty,STARTTIME,1/1/2010,1/1/2100,HL15B5,0.33,,,0.43,-,回折格子形成 回折格子CVDエッチ Duty 面内分布平均_HL15B5,回折格子形成 回折格子CVDエッチ Duty 面内分布平均_HL15B5,,OK
+GRATING_CVD_Duty,STARTTIME,Average.Duty,STARTTIME,1/1/2010,1/1/2100,HTL13B2,0.35,,,0.45,-,回折格子形成 回折格子CVDエッチ Duty 面内分布平均_HTL13B2,回折格子形成 回折格子CVDエッチ Duty 面内分布平均_HTL13B2,,OK
+GRATING_CVD_Duty,STARTTIME,Average.Duty,STARTTIME,1/1/2010,1/1/2100,HTL13D1,0.35,,,0.45,-,回折格子形成 回折格子CVDエッチ Duty 面内分布平均_HTL13D1,回折格子形成 回折格子CVDエッチ Duty 面内分布平均_HTL13D1,,OK
+GRATING_Crystal_Duty,STARTTIME,Average.Duty,STARTTIME,1/1/2010,1/1/2100,HL1362,,,,,-,回折格子エッチング Duty 面内分布平均_HL1362,回折格子エッチング Duty 面内分布平均_HL1362,,OK
+GRATING_Crystal_Duty,STARTTIME,Average.Duty,STARTTIME,1/1/2010,1/1/2100,HL1363,0.35,,,0.55,-,回折格子エッチング Duty 面内分布平均_HL1363,回折格子エッチング Duty 面内分布平均_HL1363,,OK
+GRATING_Crystal_Duty,STARTTIME,Average.Duty,STARTTIME,1/1/2010,1/1/2100,HL1364,,,,,-,回折格子エッチング Duty 面内分布平均_HL1364,回折格子エッチング Duty 面内分布平均_HL1364,,OK
+GRATING_Crystal_Duty,STARTTIME,Average.Duty,STARTTIME,1/1/2010,1/1/2100,HL13BE,0.35,,,0.55,-,回折格子エッチング Duty 面内分布平均_HL13BE,回折格子エッチング Duty 面内分布平均_HL13BE,,OK
+GRATING_Crystal_Duty,STARTTIME,Average.Duty,STARTTIME,1/1/2010,1/1/2100,HL13BFCP,0.35,,,0.55,-,回折格子エッチング Duty 面内分布平均_HL13BFCP,回折格子エッチング Duty 面内分布平均_HL13BFCP,,OK
+GRATING_Crystal_Duty,STARTTIME,Average.Duty,STARTTIME,1/1/2010,1/1/2100,HL13BS,0.35,,,0.55,-,回折格子エッチング Duty 面内分布平均_HL13BS,回折格子エッチング Duty 面内分布平均_HL13BS,,OK
+GRATING_Crystal_Duty,STARTTIME,Average.Duty,STARTTIME,1/1/2010,1/1/2100,HL13CG,0.4,,,0.6,-,回折格子エッチング Duty 面内分布平均_HL13CG,回折格子エッチング Duty 面内分布平均_HL13CG,,OK
+GRATING_Crystal_Duty,STARTTIME,Average.Duty,STARTTIME,1/1/2010,1/1/2100,HTL139S,0.35,,,0.55,-,回折格子エッチング Duty 面内分布平均_HTL139S,回折格子エッチング Duty 面内分布平均_HTL139S,,OK
+GRATING_Crystal_Duty,STARTTIME,Average.Duty,STARTTIME,1/1/2010,1/1/2100,HL13B4,0.38,,,0.52,-,回折格子エッチング Duty 面内分布平均_HL13B4,回折格子エッチング Duty 面内分布平均_HL13B4,,OK
+GRATING_Crystal_Duty,STARTTIME,Average.Duty,STARTTIME,1/1/2010,1/1/2100,HL13B5,0.38,,,0.52,-,回折格子エッチング Duty 面内分布平均_HL13B5,回折格子エッチング Duty 面内分布平均_HL13B5,,OK
+GRATING_Crystal_Duty,STARTTIME,Average.Duty,STARTTIME,1/1/2010,1/1/2100,HL13B6,0.37,,,0.51,-,回折格子エッチング Duty 面内分布平均_HL13B6,回折格子エッチング Duty 面内分布平均_HL13B6,,OK
+GRATING_Crystal_Duty,STARTTIME,Average.Duty,STARTTIME,1/1/2010,1/1/2100,HL15B5,0.36,,,0.5,-,回折格子エッチング Duty 面内分布平均_HL15B5,回折格子エッチング Duty 面内分布平均_HL15B5,,OK
+GRATING_Crystal_Duty,STARTTIME,Average.Duty,STARTTIME,1/1/2010,1/1/2100,HTL13B2,0.38,,,0.52,-,回折格子エッチング Duty 面内分布平均_HTL13B2,回折格子エッチング Duty 面内分布平均_HTL13B2,,OK
+GRATING_Crystal_Duty,STARTTIME,Average.Duty,STARTTIME,1/1/2010,1/1/2100,HTL13D1,0.38,,,0.52,-,回折格子エッチング Duty 面内分布平均_HTL13D1,回折格子エッチング Duty 面内分布平均_HTL13D1,,OK
+PIX_PIX_Thickness,STARTTIME,PIX.PIX_Ave,STARTTIME,1/1/2010,1/1/2100,-,2000,2300,2700,3000,-,PIX形成 PIX塗布 膜厚,PIX形成 PIX塗布 膜厚,,OK
+MESA_CVD_Width,STARTTIME,Width_Average,STARTTIME,1/1/2010,1/1/2100,HL1362,,,,,-,メサ形成 SiO2ドライエッチング寸法検査_HL1362,メサ形成 SiO2ドライエッチング寸法検査_HL1362,,OK
+MESA_CVD_Width,STARTTIME,Width_Average,STARTTIME,1/1/2010,1/1/2100,HL1363,1.62,,,1.82,-,メサ形成 SiO2ドライエッチング寸法検査_HL1363,メサ形成 SiO2ドライエッチング寸法検査_HL1363,,OK
+MESA_CVD_Width,STARTTIME,Width_Average,STARTTIME,1/1/2010,1/1/2100,HL1364,,,,,-,メサ形成 SiO2ドライエッチング寸法検査_HL1364,メサ形成 SiO2ドライエッチング寸法検査_HL1364,,OK
+MESA_CVD_Width,STARTTIME,Width_Average,STARTTIME,1/1/2010,1/1/2100,HL13BE,1.52,,,1.72,-,メサ形成 SiO2ドライエッチング寸法検査_HL13BE,メサ形成 SiO2ドライエッチング寸法検査_HL13BE,,OK
+MESA_CVD_Width,STARTTIME,Width_Average,STARTTIME,1/1/2010,1/1/2100,HL13BFCP,1.53,,,1.73,-,メサ形成 SiO2ドライエッチング寸法検査_HL13BFCP,メサ形成 SiO2ドライエッチング寸法検査_HL13BFCP,,OK
+MESA_CVD_Width,STARTTIME,Width_Average,STARTTIME,1/1/2010,1/1/2100,HL13BS,1.53,,,1.73,-,メサ形成 SiO2ドライエッチング寸法検査_HL13BS,メサ形成 SiO2ドライエッチング寸法検査_HL13BS,,OK
+MESA_CVD_Width,STARTTIME,Width_Average,STARTTIME,1/1/2010,1/1/2100,HL13CG,1.48,,,1.68,-,メサ形成 SiO2ドライエッチング寸法検査_HL13CG,メサ形成 SiO2ドライエッチング寸法検査_HL13CG,,OK
+MESA_CVD_Width,STARTTIME,Width_Average,STARTTIME,1/1/2010,1/1/2100,HTL139S,1.62,,,1.82,-,メサ形成 SiO2ドライエッチング寸法検査_HTL139S,メサ形成 SiO2ドライエッチング寸法検査_HTL139S,,OK
+MESA_CVD_Width,STARTTIME,Width_Average,STARTTIME,1/1/2010,3/31/2021,HL13B4,1.37,,,1.47,-,メサ形成 SiO2ドライエッチング寸法検査_HL13B4,メサ形成 SiO2ドライエッチング寸法検査_HL13B4,,OK
+MESA_CVD_Width,STARTTIME,Width_Average,STARTTIME,4/1/2021,1/1/2100,HL13B4,1.72,,,1.82,-,メサ形成 SiO2ドライエッチング寸法検査_HL13B4,メサ形成 SiO2ドライエッチング寸法検査_HL13B4,,OK
+MESA_CVD_Width,STARTTIME,Width_Average,STARTTIME,1/1/2010,4/30/2021,HL13B5,1.37,,,1.47,-,メサ形成 SiO2ドライエッチング寸法検査_HL13B5,メサ形成 SiO2ドライエッチング寸法検査_HL13B5,,OK
+MESA_CVD_Width,STARTTIME,Width_Average,STARTTIME,5/1/2021,1/1/2100,HL13B5,1.72,,,1.82,-,メサ形成 SiO2ドライエッチング寸法検査_HL13B5,メサ形成 SiO2ドライエッチング寸法検査_HL13B5,,OK
+MESA_CVD_Width,STARTTIME,Width_Average,STARTTIME,1/1/2010,1/1/2100,HL13B6,1.72,,,1.82,-,メサ形成 SiO2ドライエッチング寸法検査_HL13B6,メサ形成 SiO2ドライエッチング寸法検査_HL13B6,,OK
+MESA_CVD_Width,STARTTIME,Width_Average,STARTTIME,1/1/2010,1/1/2100,HL15B5,1.72,,,1.82,-,メサ形成 SiO2ドライエッチング寸法検査_HL15B5,メサ形成 SiO2ドライエッチング寸法検査_HL15B5,,OK
+MESA_CVD_Width,STARTTIME,Width_Average,STARTTIME,1/1/2010,1/1/2100,HTL13B2,1.37,,,1.47,-,メサ形成 SiO2ドライエッチング寸法検査_HTL13B2,メサ形成 SiO2ドライエッチング寸法検査_HTL13B2,,OK
+MESA_CVD_Width,STARTTIME,Width_Average,STARTTIME,1/1/2010,1/1/2100,HTL13D1,1.37,,,1.47,-,メサ形成 SiO2ドライエッチング寸法検査_HTL13D1,メサ形成 SiO2ドライエッチング寸法検査_HTL13D1,,OK
+PIX-DML_SiN_Step,PIX1_STARTTIME,PIX1.Step_Ave,PIX1_STARTTIME,1/1/2010,1/1/2100,-,,,,115,-,PIX形成 PIXホトエッチ PIX1 - SiN段差(DML),PIX形成 PIXホトエッチ PIX1 - SiN段差(DML),,OK
+PIX-DML_SiN_Step,PIX2_STARTTIME,PIX2.Step_Ave,PIX2_STARTTIME,1/1/2010,1/1/2100,-,,,,115,-,PIX形成 PIXホトエッチ PIX2 - SiN段差(DML),PIX形成 PIXホトエッチ PIX2 - SiN段差(DML),,OK
+PIX-DML_SiN_Step,PIX3_STARTTIME,PIX3.Step_Ave,PIX3_STARTTIME,1/1/2010,1/1/2100,-,,,,115,-,PIX形成 PIXホトエッチ PIX3 - SiN段差(DML),PIX形成 PIXホトエッチ PIX3 - SiN段差(DML),,OK
+PIX-DML_SiN_Step,PIXPre_STARTTIME,PIXPre.Step_Ave,PIXPre_STARTTIME,1/1/2010,1/1/2100,-,,,200,250,-,PIX形成 PIXホトエッチ P電極蒸着前PIX段差  SiN段差(DML),PIX形成 PIXホトエッチ P電極蒸着前PIX段差  SiN段差(DML),,OK
+TH-DML_MESA-Side_Step,STARTTIME,Step.Step_Ave,STARTTIME,1/1/2010,1/1/2100,-,125,150,775,800,-,TH形成 メサ脇段差平均,TH形成 メサ脇段差平均,,OK
+TH-DML_SiO2_EtchingRate,STARTTIME,Rate.Rate_Ave,STARTTIME,1/1/2010,1/1/2100,-,34,35,39,40,EQUIPMENT,TH形成 エッチングレート,TH形成 エッチングレート,,OK
+MESA_CVD_EtchingRate_DML,STARTTIME,Rate.Rate_Ave,STARTTIME,1/1/2010,1/1/2100,-,25,28,42,45,DryEtch,メサ形成 SiO2ドライエッチングレート(DML),メサ形成 SiO2ドライエッチングレート(DML),,OK
+MESA_CVD_EtchingRate_DML,STARTTIME,Time.Time,STARTTIME,1/1/2010,1/1/2100,-,3.5,,,6,DryEtch,メサ形成 SiO2ドライエッチング時間(DML),メサ形成 SiO2ドライエッチング時間(DML),,OK
+MESA_CAP_Depth,STARTTIME,Depth.Depth_Final,STARTTIME,1/1/2010,1/1/2100,-,500,550,850,900,PARTNUMBER,メサ形成 キャップ層ドライエッチング エッチ量,メサ形成 キャップ層ドライエッチング エッチ量,,OK
+MESA_Wet_Depth,STARTTIME,Depth.Depth_Ave,STARTTIME,1/1/2010,1/1/2100,-,1700,1750,1950,2000,EQUIPMENT,メサ形成 メサエッチング 段差測定,メサ形成 メサエッチング 段差測定,,OK
+PIX_SiN_Step,PIX1_STARTTIME,PIX1.Step_Ave,PIX1_STARTTIME,1/1/2010,1/1/2100,-,,,,115,-,PIX形成 PIXホトエッチ PIX1 - SiN段差(EML),PIX形成 PIXホトエッチ PIX1 - SiN段差(EML),,OK
+PIX_SiN_Step,PIX2_STARTTIME,PIX2.Step_Ave,PIX2_STARTTIME,1/1/2010,1/1/2100,-,,,,115,-,PIX形成 PIXホトエッチ PIX2 - SiN段差(EML),PIX形成 PIXホトエッチ PIX2 - SiN段差(EML),,OK
+PIX_SiN_Step,PIX3_STARTTIME,PIX3.Step_Ave,PIX3_STARTTIME,1/1/2010,1/1/2100,-,,,,115,-,PIX形成 PIXホトエッチ PIX3 - SiN段差(EML),PIX形成 PIXホトエッチ PIX3 - SiN段差(EML),,OK
+P-electrode_SiN_Step,STARTTIME,SiN.Step_Average,STARTTIME,1/1/2010,1/1/2100,-,,,200,250,-,p電極形成 段差測定,p電極形成 段差測定,,OK
+P-electrode_InP_Step,STARTTIME,Etching.Step_Average,STARTTIME,1/1/2010,1/1/2100,-,260,270,390,400,-,p電極形成 劈開代段差,p電極形成 劈開代段差,,OK
+BJ1_CVD_EtchingRate_Merge,STARTTIME,Rate.Rate_Ave,STARTTIME,1/1/2010,1/1/2100,-,28,29,41,42,DryEtch,BJ成長 BJホト・エッチ エッチングレート,BJ成長 BJホト・エッチ エッチングレート,,OK
+BJ1_CVD_EtchingRate_Merge,STARTTIME,Time.Time,STARTTIME,1/1/2010,1/1/2100,-,7,,,11,DryEtch,BJ成長 BJホト・エッチ エッチ時間,BJ成長 BJホト・エッチ エッチ時間,,OK
+BJ1_Crystal_Depth,STARTTIME,First.Rate,STARTTIME,1/1/2010,1/1/2100,"HL13B4,HL13B5,HTL13B2,HTL13D1",26.5,,,32,-,BJ1(LD)成長 活性層エッチ1 本エッチレート,BJ1(LD)成長 活性層エッチ1 本エッチレート,,OK
+BJ1_Crystal_Depth,STARTTIME,Second.Rate,STARTTIME,1/1/2010,1/1/2100,"HL13B4,HL13B5,HTL13B2,HTL13D1",18.5,,,25,-,BJ1(LD)成長 活性層エッチ1 追加エッチレート,BJ1(LD)成長 活性層エッチ1 追加エッチレート,,OK
+BJ1_Crystal_Depth,STARTTIME,Final.Depth,STARTTIME,1/1/2010,1/1/2100,"HL13B4,HL13B5,HTL13B2,HTL13D1",347,,,387,-,BJ1(LD)成長 活性層エッチ1 エッチング深さ,BJ1(LD)成長 活性層エッチ1 エッチング深さ,,OK
+BJ1_Crystal_Depth,STARTTIME,Final.Error,STARTTIME,1/1/2010,1/1/2100,"HL13B4,HL13B5,HTL13B2,HTL13D1",-20,,,20,-,BJ1(LD)成長 活性層エッチ1 狙い誤差,BJ1(LD)成長 活性層エッチ1 狙い誤差,,OK
+BJ1_Crystal_Depth,STARTTIME,First.Rate,STARTTIME,1/1/2010,1/1/2100,HL13B6,26,,,32,-,BJ1(LD)成長 活性層エッチ1 本エッチレート,BJ1(LD)成長 活性層エッチ1 本エッチレート,,OK
+BJ1_Crystal_Depth,STARTTIME,Second.Rate,STARTTIME,1/1/2010,1/1/2100,HL13B6,18,,,25,-,BJ1(LD)成長 活性層エッチ1 追加エッチレート,BJ1(LD)成長 活性層エッチ1 追加エッチレート,,OK
+BJ1_Crystal_Depth,STARTTIME,Final.Depth,STARTTIME,1/1/2010,1/1/2100,HL13B6,377,,,417,-,BJ1(LD)成長 活性層エッチ1 エッチング深さ,BJ1(LD)成長 活性層エッチ1 エッチング深さ,,OK
+BJ1_Crystal_Depth,STARTTIME,Final.Error,STARTTIME,1/1/2010,1/1/2100,HL13B6,-20,,,20,-,BJ1(LD)成長 活性層エッチ1 狙い誤差,BJ1(LD)成長 活性層エッチ1 狙い誤差,,OK
+BJ1_Crystal_Depth,STARTTIME,First.Rate,STARTTIME,1/1/2010,1/1/2100,HL15B5,22,,,28,-,BJ1(LD)成長 活性層エッチ1 本エッチレート,BJ1(LD)成長 活性層エッチ1 本エッチレート,,OK
+BJ1_Crystal_Depth,STARTTIME,Second.Rate,STARTTIME,1/1/2010,1/1/2100,HL15B5,17,,,24,-,BJ1(LD)成長 活性層エッチ1 追加エッチレート,BJ1(LD)成長 活性層エッチ1 追加エッチレート,,OK
+BJ1_Crystal_Depth,STARTTIME,Final.Depth,STARTTIME,1/1/2010,1/1/2100,HL15B5,347,,,387,-,BJ1(LD)成長 活性層エッチ1 エッチング深さ,BJ1(LD)成長 活性層エッチ1 エッチング深さ,,OK
+BJ1_Crystal_Depth,STARTTIME,Final.Error,STARTTIME,1/1/2010,1/1/2100,HL15B5,-20,,,20,-,BJ1(LD)成長 活性層エッチ1 狙い誤差,BJ1(LD)成長 活性層エッチ1 狙い誤差,,OK
+BJ2_Crystal_Depth,STARTTIME,First.Rate,STARTTIME,1/1/2010,1/1/2100,-,28,,,35,-,BJ2(WG)成長 活性層エッチ2 本エッチレート,BJ2(WG)成長 活性層エッチ2 本エッチレート,,OK
+BJ2_Crystal_Depth,STARTTIME,Second.Rate,STARTTIME,1/1/2010,1/1/2100,-,19,,,26,-,BJ2(WG)成長 活性層エッチ2 追加エッチレート,BJ2(WG)成長 活性層エッチ2 追加エッチレート,,OK
+BJ2_Crystal_Depth,STARTTIME,Final.Depth,STARTTIME,1/1/2010,1/1/2100,-,390,,,430,-,BJ2(WG)成長 活性層エッチ2 エッチング深さ,BJ2(WG)成長 活性層エッチ2 エッチング深さ,,OK
+BJ2_Crystal_Depth,STARTTIME,Final.Error,STARTTIME,1/1/2010,1/1/2100,-,-20,,,20,-,BJ2(WG)成長 活性層エッチ2 狙い誤差,BJ2(WG)成長 活性層エッチ2 狙い誤差,,OK
+MESA_CVD_EtchingRate,STARTTIME,Rate.Rate_Ave,STARTTIME,1/1/2010,1/1/2100,-,30,31,34,35,-,メサ形成 SiO2ドライエッチングレート(EML),メサ形成 SiO2ドライエッチングレート(EML),,OK
+MESA_CVD_EtchingRate,STARTTIME,Time.Time,STARTTIME,1/1/2010,1/1/2100,-,17,,,21,-,メサ形成 SiO2ドライエッチング時間(EML),メサ形成 SiO2ドライエッチング時間(EML),,OK
+ISO-EML_ISO_Step,STARTTIME,Resist.Resist_Ave,STARTTIME,1/1/2010,1/1/2100,-,3300,,,3900,-,分離溝形成 レジスト膜厚,分離溝形成 レジスト膜厚,,OK
+ISO-EML_ISO_Step,STARTTIME,Step_Step,STARTTIME,1/1/2010,1/1/2100,-,,,,3000,-,分離溝形成 分離溝段差,分離溝形成 分離溝段差,,OK
+ISO-EML_ISO_Step,STARTTIME,Y1.Y1_Ave,STARTTIME,1/1/2010,1/1/2100,-,900,945,1255,1300,-,分離溝形成 分離溝エッチ量：Y1,分離溝形成 分離溝エッチ量：Y1,,OK
+ISO-EML_ISO_Step,STARTTIME,Y2.Y2_Ave,STARTTIME,1/1/2010,1/1/2100,-,1200,1235,1565,1600,-,分離溝形成 分離溝エッチ量：Y2,分離溝形成 分離溝エッチ量：Y2,,OK
+MESA_Crystal_Depth_ICP,STARTTIME,Etching.Etching_Rate,STARTTIME,1/1/2010,1/1/2100,-,,,,,-,メサ形成 メサエッチ エッチング深さ,メサ形成 メサエッチ エッチング深さ,,OK
+SEM-EML_All_Data,STARTTIME,MESA.Width_Ave,STARTTIME,1/1/2010,1/1/2100,-,1.44,,,1.64,PARTNUMBER,先行SEM評価 メサ幅平均(EML),先行SEM評価 メサ幅平均(EML),,
+SEM-EML_All_Data,STARTTIME,MESA.Height_Ave,STARTTIME,1/1/2010,1/1/2100,-,3.6,,,4.2,PARTNUMBER,先行SEM評価 メサ高さ平均(EML),先行SEM評価 メサ高さ平均(EML),,
+SEM-EML_All_Data,STARTTIME,Contact.Width_Ave,STARTTIME,1/1/2010,1/1/2100,-,0.8,0.97,,,PARTNUMBER,先行SEM評価 コンタクト上幅平均(EML),先行SEM評価 コンタクト上幅平均(EML),,
+SEM-EML_All_Data,STARTTIME,Contact.Degree_Ave,STARTTIME,1/1/2010,1/1/2100,-,58,,,,PARTNUMBER,先行SEM評価 コンタクト角度平均(EML),先行SEM評価 コンタクト角度平均(EML),,
+SEM-EML_All_Data,STARTTIME,Ru.Thickness_Ave,STARTTIME,1/1/2010,1/1/2100,-,6.9,,,7.9,PARTNUMBER,先行SEM評価 埋め込み膜厚平均(EML),先行SEM評価 埋め込み膜厚平均(EML),,
+SEM-DML_All_Data,STARTTIME,MESA.Width_Ave,STARTTIME,1/1/2010,1/1/2100,HL13BE,1.35,,,1.52,-,先行SEM評価 メサ幅平均(DML)_HL13BE,先行SEM評価 メサ幅平均(DML)_HL13BE,,OK
+SEM-DML_All_Data,STARTTIME,MESA.Width_Ave,STARTTIME,1/1/2010,1/1/2100,HL13BFCP,1.3,,,1.5,-,先行SEM評価 メサ幅平均(DML)_HL13BFCP,先行SEM評価 メサ幅平均(DML)_HL13BFCP,,OK
+SEM-DML_All_Data,STARTTIME,MESA.Width_Ave,STARTTIME,1/1/2010,1/1/2100,HL13BS,1.4,,,1.6,-,先行SEM評価 メサ幅平均(DML)_HL13BS,先行SEM評価 メサ幅平均(DML)_HL13BS,,OK
+SEM-DML_All_Data,STARTTIME,MESA.Width_Ave,STARTTIME,1/1/2010,9/22/2021,HL13CG,1.4,,,1.6,-,先行SEM評価 メサ幅平均(DML)_HL13CG,先行SEM評価 メサ幅平均(DML)_HL13CG,,OK
+SEM-DML_All_Data,STARTTIME,MESA.Width_Ave,STARTTIME,9/23/2021,1/1/2100,HL13CG,1.35,,,1.55,-,先行SEM評価 メサ幅平均(DML)_HL13CG,先行SEM評価 メサ幅平均(DML)_HL13CG,,OK
+SEM-DML_All_Data,STARTTIME,MESA.Width_Ave,STARTTIME,1/1/2010,1/1/2100,HL1363,1.4,,,1.6,-,先行SEM評価 メサ幅平均(DML)_HL1363,先行SEM評価 メサ幅平均(DML)_HL1363,,OK
+SEM-DML_All_Data,STARTTIME,MESA.Width_Ave,STARTTIME,1/1/2010,1/1/2100,HTL139S,1.4,,,1.6,-,先行SEM評価 メサ幅平均(DML)_HTL139S,先行SEM評価 メサ幅平均(DML)_HTL139S,,OK
+SEM-DML_All_Data,STARTTIME,MESA.Height_Ave,STARTTIME,1/1/2010,1/1/2100,-,1.3,,,2.3,PARTNUMBER,先行SEM評価 メサ高さ平均(DML),先行SEM評価 メサ高さ平均(DML),,OK
+SEM-DML_All_Data,STARTTIME,SiO2.Height_Ave,STARTTIME,1/1/2010,1/1/2100,-,1.3,,,2.1,PARTNUMBER,先行SEM評価 SiO2高さ 平均(DML),先行SEM評価 SiO2高さ 平均(DML),,OK
+SEM-DML_All_Data,STARTTIME,SiO2.Thickness_Ave,STARTTIME,1/1/2010,1/1/2100,-,0.1,,,0.5,PARTNUMBER,先行SEM評価 SiO2膜厚平均(DML),先行SEM評価 SiO2膜厚平均(DML),,OK
+SEM-DML_All_Data,STARTTIME,Wmi.Width_Ave,STARTTIME,1/1/2010,1/1/2100,-,3.5,,,5.5,PARTNUMBER,先行SEM評価 Wmi平均(DML),先行SEM評価 Wmi平均(DML),,OK
+SEM-DML_All_Data,STARTTIME,ISO.Depth_Ave,STARTTIME,1/1/2010,1/1/2100,-,0.8,,,2,PARTNUMBER,先行SEM評価 ISO深さ平均(DML),先行SEM評価 ISO深さ平均(DML),,OK
+SEM-DML_All_Data,STARTTIME,SiO2.EtchingDepth_Ave,STARTTIME,1/1/2010,1/1/2100,-,0.01,,,0.25,PARTNUMBER,先行SEM評価 SiO2エッチング深さ平均(DML),先行SEM評価 SiO2エッチング深さ平均(DML),,OK
+T1-DML,STARTTIME,PL-Wavelength-Center,STARTTIME,1/1/2010,1/1/2100,-,,,,,-,第一多層成長 PL波長差 中心部 ,第一多層成長 PL波長差 中心部 ,,OK
+T1-DML,STARTTIME,PL-Intensity,STARTTIME,1/1/2010,1/1/2100,-,10000,,,,-,第一多層成長 PL強度,第一多層成長 PL強度,,OK
+T1-DML,STARTTIME,PL-Intensity_Rate,STARTTIME,1/1/2010,1/1/2100,-,,,,,-,第一多層成長 PL強度比 面内分布,第一多層成長 PL強度比 面内分布,,Ok
+T1-DML,STARTTIME,PL-Intensity_Rate_Calk,STARTTIME,1/1/2010,1/1/2100,-,,,0.39,,-,第一多層成長 PL強度比凹凸,第一多層成長 PL強度比凹凸,,OK
+T1-DML,STARTTIME,XRD-Strain,STARTTIME,1/1/2010,1/1/2100,-,-0.36,,,-0.26,-,第一多層成長  X線回折 MQW厚(Lw+Lb) ,第一多層成長  X線回折 MQW厚(Lw+Lb) ,,OK
+T1-DML,STARTTIME,XRD-Thickness,STARTTIME,1/1/2010,1/1/2100,-,18.4,,,19.6,-,第一多層成長  X線回折 平均歪,第一多層成長  X線回折 平均歪,,OK
+EA-EML_QC,Format2_STARTTIME,Mapper_Average_Mapper_PL_Lambda_Diff,Format2_STARTTIME,1/1/2010,1/1/2100,-,,,,,-,EA多層成長 PL波長差 (A)(B)(C)(D)平均,EA多層成長 PL波長差 (A)(B)(C)(D)平均,,OK
+EA-EML_QC,Format2_STARTTIME,Mapper_Average_Mapper_PL_Intensity,Format2_STARTTIME,1/1/2010,1/1/2100,-,55000,,,5000,-,EA多層成長 PL強度 面内(A)(B)(C)(D)平均,EA多層成長 PL強度 面内(A)(B)(C)(D)平均,,OK
+EA-EML_QC,Format2_STARTTIME,Mapper_Average_Mapper_PL_FWHM,Format2_STARTTIME,1/1/2010,1/1/2100,-,,,,33,-,EA多層成長 PL半値幅 面内(A)(B)(C)(D)平均,EA多層成長 PL半値幅 面内(A)(B)(C)(D)平均,,OK
+EA-EML_QC,Format2_STARTTIME,Mapper_Average_Mapper_PL_Tails,Format2_STARTTIME,1/1/2010,1/1/2100,-,,,,,-,EA多層成長 PL裾引き 面内(A)(B)(C)(D)平均,EA多層成長 PL裾引き 面内(A)(B)(C)(D)平均,,OK
+EA-EML_F1,FORMAT1_STARTTIME,PL_Wavelength,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,-,F1EA多層成長  X線回折 PL波長,F1EA多層成長  X線回折 PL波長,,OK
+EA-EML_F1,FORMAT1_STARTTIME,PL_Intensity,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,5000,,,55000,-,F1EA多層成長  X線回折 PL強度,F1EA多層成長  X線回折 PL強度,,OK
+EA-EML_F1,FORMAT1_STARTTIME,PL_FWHM,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,33,-,F1EA多層成長  SEM 半値幅,F1EA多層成長  SEM 半値幅,,OK
+EA-EML_F1,FORMAT1_STARTTIME,Xray_Thickness,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,14.4,,,15.6,-,F1EA多層成長  X線回折 MQW周期膜厚,F1EA多層成長  X線回折 MQW周期膜厚,,OK
+EA-EML_F1,FORMAT1_STARTTIME,Xray_Strain,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,0.16,,,0.22,-,F1EA多層成長  X線回折 平均歪,F1EA多層成長  X線回折 平均歪,,OK
+EA-EML_F1,FORMAT1_STARTTIME,Thickness_Cap,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,-,F1EA多層成長  SEM InPキャップSEM,F1EA多層成長  SEM InPキャップSEM,,OK
+EA-EML_F1,FORMAT1_STARTTIME,Thickness_Core,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,322,,,372,-,F1EA多層成長  SEM 活性層膜厚,F1EA多層成長  SEM 活性層膜厚,,OK
+LD-EML_QC,Format2_STARTTIME,Mapper_Average_Mapper_PL_Lambda_Diff,Format2_STARTTIME,1/1/2010,1/1/2100,-,,,,,-,LD多層成長 PL波長差 (A)(B)(C)(D)平均,LD多層成長 PL波長差 (A)(B)(C)(D)平均,,OK
+LD-EML_QC,Format2_STARTTIME,Mapper_Average_Mapper_PL_Center-ABCD_Diff,Format2_STARTTIME,1/1/2010,1/1/2100,-,,,,,-,LD多層成長 PL波長外周部(中心部平均 -外周部4点)最大差,LD多層成長 PL波長外周部(中心部平均 -外周部4点)最大差,,OK
+LD-EML_QC,Format2_STARTTIME,Mapper_Average_Mapper_PL_Intensity,Format2_STARTTIME,1/1/2010,1/1/2100,-,5000,,,55000,-,LD多層成長 PL強度 面内中心部平均,LD多層成長 PL強度 面内中心部平均,,OK
+LD-EML_QC,Format2_STARTTIME,Mapper_Average_Mapper_PL_FWHM,Format2_STARTTIME,1/1/2010,1/1/2100,-,,,,33.1,-,LD多層成長 PL半値幅 面内中心部平均,LD多層成長 PL半値幅 面内中心部平均,,OK
+LD-EML_F1,FORMAT1_STARTTIME,PL_Wavelength,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,-,F1LD多層成長 PL波長,F1LD多層成長 PL波長,,OK
+LD-EML_F1,FORMAT1_STARTTIME,PL_Intensity,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,5000,,,55000,-,F1LD多層成長 PL強度,F1LD多層成長 PL強度,,OK
+LD-EML_F1,FORMAT1_STARTTIME,PL_FWHM,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,33.1,-,F1LD多層成長 PL半値幅,F1LD多層成長 PL半値幅,,OK
+LD-EML_F1,FORMAT1_STARTTIME,Xray_Thickness,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,15.4,,,16.6,-,F1LD多層成長 X線回折 MQW周期膜厚,F1LD多層成長 X線回折 MQW周期膜厚,,OK
+LD-EML_F1,FORMAT1_STARTTIME,Xray_Strain,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,0.25,,,0.313,-,F1LD多層成長  X線回折 平均歪,F1LD多層成長  X線回折 平均歪,,OK
+LD-EML_F1,FORMAT1_STARTTIME,Thickness_InP_Spacer1,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,67,,,83,-,F1LD多層成長 SEM InPスペーサ厚,F1LD多層成長 SEM InPスペーサ厚,,OK
+LD-EML_F1,FORMAT1_STARTTIME,Thickness_Core,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,302.8,,,337.2,-,F1LD多層成長 SEM 活性層膜厚,F1LD多層成長 SEM 活性層膜厚,,OK
+LD-EML_F2,FORMAT1_STARTTIME,PL_Wavelength,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,-,F2LD多層成長 PL波長,F2LD多層成長 PL波長,,OK
+LD-EML_F2,FORMAT1_STARTTIME,PL_Intensity,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,5000,,,55000,-,F2LD多層成長 PL強度,F2LD多層成長 PL強度,,OK
+LD-EML_F2,FORMAT1_STARTTIME,PL_FWHM,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,33.1,-,F2LD多層成長 PL半値幅,F2LD多層成長 PL半値幅,,OK
+LD-EML_F2,FORMAT1_STARTTIME,Xray_Thickness,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,15.4,,,16.6,-,F2LD多層成長 X線回折 MQW周期膜厚,F2LD多層成長 X線回折 MQW周期膜厚,,OK
+LD-EML_F2,FORMAT1_STARTTIME,Xray_Strain,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,0.25,,,0.313,-,F2LD多層成長  X線回折 平均歪,F2LD多層成長  X線回折 平均歪,,OK
+LD-EML_F2,FORMAT1_STARTTIME,Thickness_InP_Spacer1,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,67.5,,,82.5,-,F2LD多層成長 SEM InPスペーサ厚,F2LD多層成長 SEM InPスペーサ厚,,OK
+LD-EML_F2,FORMAT1_STARTTIME,Thickness_Core,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,300,,,352,-,F2LD多層成長 SEM 活性層膜厚,F2LD多層成長 SEM 活性層膜厚,,OK
+LD-EML_F6,FORMAT1_STARTTIME,PL_Wavelength,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,-,F6LD多層成長 PL波長,F6LD多層成長 PL波長,,OK
+LD-EML_F6,FORMAT1_STARTTIME,PL_Intensity,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,5000,,,55000,-,F6LD多層成長 PL強度,F6LD多層成長 PL強度,,OK
+LD-EML_F6,FORMAT1_STARTTIME,PL_FWHM,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,33.1,-,F6LD多層成長 PL半値幅,F6LD多層成長 PL半値幅,,OK
+LD-EML_F6,FORMAT1_STARTTIME,Xray_Thickness,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,15.4,,,16.6,-,F6LD多層成長 X線回折 MQW周期膜厚,F6LD多層成長 X線回折 MQW周期膜厚,,OK
+LD-EML_F6,FORMAT1_STARTTIME,Xray_Strain,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,0.25,,,0.313,-,F6LD多層成長  X線回折 平均歪,F6LD多層成長  X線回折 平均歪,,OK
+LD-EML_F6,FORMAT1_STARTTIME,Thickness_InP_Spacer1,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,67.5,,,82.5,-,F6LD多層成長 SEM InPスペーサ厚,F6LD多層成長 SEM InPスペーサ厚,,OK
+LD-EML_F6,FORMAT1_STARTTIME,Thickness_Core,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,307,,,345,-,F6LD多層成長 SEM 活性層膜厚,F6LD多層成長 SEM 活性層膜厚,,OK
+WG-EML_QC,STARTTIME,Wavelength_WG,STARTTIME,1/1/2010,1/1/2100,-,1143,,,1163,MOCVD,WG成長 WG多層成長 組成,WG成長 WG多層成長 組成,,OK
+WG-EML_QC,STARTTIME,Straing_WG,STARTTIME,1/1/2010,1/1/2100,-,0,,,-0.15,MOCVD,WG成長 WG多層成長 歪,WG成長 WG多層成長 歪,,OK
+WG-EML_QC,STARTTIME,Thickness_Cap,STARTTIME,1/1/2010,1/1/2100,-,99,,,119,MOCVD,WG成長 WG多層成長 InPキャップ膜厚,WG成長 WG多層成長 InPキャップ膜厚,,OK
+WG-EML_QC,STARTTIME,Thickness_Core,STARTTIME,1/1/2010,1/1/2100,-,327,,,387,MOCVD,WG成長 WG多層成長 活性層膜厚,WG成長 WG多層成長 活性層膜厚,,OK
+T2-EML_QC,STARTTIME,CarrierConcentration_Clad,STARTTIME,1/1/2010,1/1/2100,-,1.00E+18,,,1.40E+18,MOCVD,第二多層成長(EML) ポラロン p-InP clad.(2),第二多層成長(EML) ポラロン p-InP clad.(2),TRUE,OK
+T2-EML_QC,STARTTIME,CarrierConcentration_Contact,STARTTIME,1/1/2010,1/1/2100,-,1.00E+19,,,2.00E+19,MOCVD,第二多層成長(EML) ポラロン p-InGaAsコンタクト,第二多層成長(EML) ポラロン p-InGaAsコンタクト,TRUE,OK
+T2-EML_QC,STARTTIME,CarrierConcentration_Minimum,STARTTIME,1/1/2010,1/1/2100,-,,,,,MOCVD,第二多層成長(EML) ポラロン p-InGaA Minimum,第二多層成長(EML) ポラロン p-InGaA Minimum,TRUE,OK
+T2-EML_QC,STARTTIME,Thickness_Clad,STARTTIME,1/1/2010,1/1/2100,-,1425,,,1575,MOCVD,第二多層成長(EML) SEM p-InP膜厚,第二多層成長(EML) SEM p-InP膜厚,,OK
+T2-EML_QC,STARTTIME,Thickness_Contact,STARTTIME,1/1/2010,1/1/2100,-,234,,,286,MOCVD,第二多層成長(EML) SEM p-InGaAs膜厚,第二多層成長(EML) SEM p-InGaAs膜厚,,OK
+Ru-EML_F3,STARTTIME,Particles.Particles,STARTTIME,1/1/2010,1/1/2100,-,,,200,1852,OPERATION,異物数中央平均(F3炉),異物数中央平均(F3炉),TRUE,OK
+Ru-EML_F3,STARTTIME,Thickness.Thickness_Total,STARTTIME,1/1/2010,1/1/2100,-,2367,2431.354515,2702.641563,2767,OPERATION,Ru埋込み成長 膜厚(F3炉),Ru埋込み成長 膜厚(F3炉),,OK
+Ru-EML_F4,STARTTIME,Particles.Particles,STARTTIME,1/1/2010,1/1/2100,-,,,200,1852,OPERATION,異物数中央平均(F4炉),異物数中央平均(F4炉),TRUE,OK
+Ru-EML_F4,STARTTIME,Thickness.Thickness_Total,STARTTIME,1/1/2010,1/1/2100,-,2357,2419.4,2668.7,2731.1,OPERATION,Ru埋込み成長 膜厚(F4炉),Ru埋込み成長 膜厚(F4炉),,OK
+T2-DML_QC,STARTTIME,XRayDiffraction_Strain,STARTTIME,1/1/2010,1/1/2100,-,-0.1,,,0.1,MOCVD,第二多層成長(DML) ポラロン InGaAs層歪量,第二多層成長(DML) ポラロン InGaAs層歪量,,OK
+T2-DML_QC,STARTTIME,CarrierConcentration_Clad,STARTTIME,1/1/2010,1/1/2100,-,,,,,MOCVD,第二多層成長(DML) ポラロン p-InP clad.(2),第二多層成長(DML) ポラロン p-InP clad.(2),TRUE,OK
+T2-DML_QC,STARTTIME,CarrierConcentration_Contact,STARTTIME,1/1/2010,1/1/2100,-,1.00E+19,,,2.00E+19,MOCVD,第二多層成長(DML) ポラロン p-InGaAsコンタクト,第二多層成長(DML) ポラロン p-InGaAsコンタクト,TRUE,OK
+T2-DML_QC,STARTTIME,CarrierConcentration_Minimum,STARTTIME,1/1/2010,1/1/2100,-,,,,,MOCVD,第二多層成長(DML) ポラロン p-InGaAs Minimum,第二多層成長(DML) ポラロン p-InGaAs Minimum,TRUE,OK
+T2-DML_QC,STARTTIME,Thickness_Clad,STARTTIME,1/1/2010,1/1/2100,-,1476,1558,1722,1804,MOCVD,第二多層成長(DML) SEM p-InP膜厚,第二多層成長(DML) SEM p-InP膜厚,,OK
+T2-DML_QC,STARTTIME,Thickness_Contact,STARTTIME,1/1/2010,1/1/2100,-,234,,,286,MOCVD,第二多層成長(DML) SEM p-InGaAs膜厚,第二多層成長(DML) SEM p-InGaAs膜厚,,OK
+T2-DML_QC,STARTTIME,Particles,STARTTIME,1/1/2010,1/1/2100,-,,,,146,MOCVD,第二多層成長(DML) 結晶異物,第二多層成長(DML) 結晶異物,,OK
+EA-EML_F1,FORMAT1_STARTTIME,Dulation_Step17,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,PARTNUMBER,F1-EA Roop-Collection 成長時間_下SCH_Q1.05,F1-EA Roop-Collection 成長時間_下SCH_Q1.05,,OK
+EA-EML_F1,FORMAT1_STARTTIME,Dulation_Step21,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,PARTNUMBER,F1-EA Roop-Collection 成長時間_MQWバリア,F1-EA Roop-Collection 成長時間_MQWバリア,,OK
+EA-EML_F1,FORMAT1_STARTTIME,Dulation_Step25,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,PARTNUMBER,F1-EA Roop-Collection 成長時間_MQWウェル,F1-EA Roop-Collection 成長時間_MQWウェル,,OK
+EA-EML_F1,FORMAT1_STARTTIME,MO6-TEG_Step17,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,PARTNUMBER,F1-EA Roop-Collection TEG(MO6)流量_SCH_Q1.05,F1-EA Roop-Collection TEG(MO6)流量_SCH_Q1.05,,OK
+EA-EML_F1,FORMAT1_STARTTIME,MO6-TEG_Step21,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,PARTNUMBER,F1-EA Roop-Collection TEG(MO6)流量_MQWバリア,F1-EA Roop-Collection TEG(MO6)流量_MQWバリア,,OK
+EA-EML_F1,FORMAT1_STARTTIME,MO4-TEG_Step25,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,PARTNUMBER,F1-EA Roop-Collection TEG(MO4)流量_MQWウェル,F1-EA Roop-Collection TEG(MO4)流量_MQWウェル,,OK
+EA-EML_F1,FORMAT1_STARTTIME,AsH3-5percent_Step17,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,PARTNUMBER,F1-EA Roop-Collection AsH3(5%)流量_SCH_n-Q1.05,F1-EA Roop-Collection AsH3(5%)流量_SCH_n-Q1.05,,OK
+EA-EML_F1,FORMAT1_STARTTIME,AsH3-5percent_Step21,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,PARTNUMBER,F1-EA Roop-Collection AsH3(5%)流量_MQWバリア,F1-EA Roop-Collection AsH3(5%)流量_MQWバリア,,OK
+EA-EML_F1,FORMAT1_STARTTIME,AsH3-5percent_Step25,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,PARTNUMBER,F1-EA Roop-Collection AsH3(5%)流量_MQWウェル,F1-EA Roop-Collection AsH3(5%)流量_MQWウェル,,OK
+LD-EML_F1,FORMAT1_STARTTIME,Dulation_Step9,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,PARTNUMBER,F1-LD Roop-Collection 成長時間_下SCH_Q1.05,F1-LD Roop-Collection 成長時間_下SCH_Q1.05,,OK
+LD-EML_F1,FORMAT1_STARTTIME,Dulation_Step13,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,PARTNUMBER,F1-LD Roop-Collection 成長時間_MQWバリア,F1-LD Roop-Collection 成長時間_MQWバリア,,OK
+LD-EML_F1,FORMAT1_STARTTIME,Dulation_Step17,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,PARTNUMBER,F1-LD Roop-Collection 成長時間_MQWウェル,F1-LD Roop-Collection 成長時間_MQWウェル,,OK
+LD-EML_F1,FORMAT1_STARTTIME,MO2-TEG_Step9,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,PARTNUMBER,F1-LD Roop-Collection TEG(MO2)流量_SCH_Q1.05,F1-LD Roop-Collection TEG(MO2)流量_SCH_Q1.05,,OK
+LD-EML_F1,FORMAT1_STARTTIME,MO2-TEG_Step13,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,PARTNUMBER,F1-LD Roop-Collection TEG(MO2)流量_MQWバリア,F1-LD Roop-Collection TEG(MO2)流量_MQWバリア,,OK
+LD-EML_F1,FORMAT1_STARTTIME,MO4-TEG_Step17,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,PARTNUMBER,F1-LD Roop-Collection TEG(MO4)流量_MQWウェル,F1-LD Roop-Collection TEG(MO4)流量_MQWウェル,,OK
+LD-EML_F1,FORMAT1_STARTTIME,AsH3-5percent_Step9,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,PARTNUMBER,F1-LD Roop-Collection AsH3(5%)流量_SCH_n-Q1.05,F1-LD Roop-Collection AsH3(5%)流量_SCH_n-Q1.05,,OK
+LD-EML_F1,FORMAT1_STARTTIME,AsH3-5percent_Step13,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,PARTNUMBER,F1-LD Roop-Collection AsH3(5%)流量_MQWバリア,F1-LD Roop-Collection AsH3(5%)流量_MQWバリア,,OK
+LD-EML_F1,FORMAT1_STARTTIME,AsH3-5percent_Step17,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,PARTNUMBER,F1-LD Roop-Collection AsH3(5%)流量_MQWウェル,F1-LD Roop-Collection AsH3(5%)流量_MQWウェル,,OK
+LD-EML_F2,FORMAT1_STARTTIME,Dulation_Step8,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,PARTNUMBER,F2-LD Roop-Collection 成長時間_下SCH_Q1.03,F2-LD Roop-Collection 成長時間_下SCH_Q1.03,,OK
+LD-EML_F2,FORMAT1_STARTTIME,Dulation_Step12,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,PARTNUMBER,F2-LD Roop-Collection 成長時間_MQWバリア,F2-LD Roop-Collection 成長時間_MQWバリア,,OK
+LD-EML_F2,FORMAT1_STARTTIME,Dulation_Step16,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,PARTNUMBER,F2-LD Roop-Collection 成長時間_MQWウェル,F2-LD Roop-Collection 成長時間_MQWウェル,,OK
+LD-EML_F2,FORMAT1_STARTTIME,MO2-TEG_Step8,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,PARTNUMBER,F2-LD Roop-Collection TEG(MO2)流量_SCH_Q1.03,F2-LD Roop-Collection TEG(MO2)流量_SCH_Q1.03,,OK
+LD-EML_F2,FORMAT1_STARTTIME,MO2-TEG_Step12,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,PARTNUMBER,F2-LD Roop-Collection TEG(MO2)流量_MQWバリア,F2-LD Roop-Collection TEG(MO2)流量_MQWバリア,,OK
+LD-EML_F2,FORMAT1_STARTTIME,MO4-TEG_Step16,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,PARTNUMBER,F2-LD Roop-Collection TEG(MO4)流量_MQWウェル,F2-LD Roop-Collection TEG(MO4)流量_MQWウェル,,OK
+LD-EML_F2,FORMAT1_STARTTIME,AsH3-5percent_Step8,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,PARTNUMBER,F2-LD Roop-Collection AsH3(5%)流量_SCH_n-Q1.03,F2-LD Roop-Collection AsH3(5%)流量_SCH_n-Q1.03,,OK
+LD-EML_F2,FORMAT1_STARTTIME,AsH3-5percent_Step12,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,PARTNUMBER,F2-LD Roop-Collection AsH3(5%)流量_MQWバリア,F2-LD Roop-Collection AsH3(5%)流量_MQWバリア,,OK
+LD-EML_F2,FORMAT1_STARTTIME,AsH3-5percent_Step16,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,PARTNUMBER,F2-LD Roop-Collection AsH3(5%)流量_MQWウェル,F2-LD Roop-Collection AsH3(5%)流量_MQWウェル,,OK
+LD-EML_F6,FORMAT1_STARTTIME,Dulation_Step9,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,PARTNUMBER,F6-LD Roop-Collection 成長時間_下SCH_Q1.03,F6-LD Roop-Collection 成長時間_下SCH_Q1.03,,OK
+LD-EML_F6,FORMAT1_STARTTIME,Dulation_Step13,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,PARTNUMBER,F6-LD Roop-Collection 成長時間_MQWバリア,F6-LD Roop-Collection 成長時間_MQWバリア,,OK
+LD-EML_F6,FORMAT1_STARTTIME,Dulation_Step17,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,PARTNUMBER,F6-LD Roop-Collection 成長時間_MQWウェル,F6-LD Roop-Collection 成長時間_MQWウェル,,OK
+LD-EML_F6,FORMAT1_STARTTIME,MO1-TEG-1_Step9,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,PARTNUMBER,F6-LD Roop-Collection TEG(MO1)流量_SCH_Q1.03,F6-LD Roop-Collection TEG(MO1)流量_SCH_Q1.03,,OK
+LD-EML_F6,FORMAT1_STARTTIME,MO1-TEG-1_Step13,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,PARTNUMBER,F6-LD Roop-Collection TEG(MO1)流量_MQWバリア,F6-LD Roop-Collection TEG(MO1)流量_MQWバリア,,OK
+LD-EML_F6,FORMAT1_STARTTIME,MO3-TEG-2_Step17,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,PARTNUMBER,F6-LD Roop-Collection TEG(MO3)流量_MQWウェル,F6-LD Roop-Collection TEG(MO3)流量_MQWウェル,,OK
+LD-EML_F6,FORMAT1_STARTTIME,AsH3-21-5percent_Step9,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,PARTNUMBER,F6-LD Roop-Collection AsH3(5%)流量_SCH_n-Q1.03,F6-LD Roop-Collection AsH3(5%)流量_SCH_n-Q1.03,,OK
+LD-EML_F6,FORMAT1_STARTTIME,AsH3-21-5percent_Step13,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,PARTNUMBER,F6-LD Roop-Collection AsH3(5%)流量_MQWバリア,F6-LD Roop-Collection AsH3(5%)流量_MQWバリア,,OK
+LD-EML_F6,FORMAT1_STARTTIME,AsH3-21-5percent_Step17,FORMAT1_STARTTIME,1/1/2010,1/1/2100,-,,,,,PARTNUMBER,F6-LD Roop-Collection AsH3(5%)流量_MQWウェル,F6-LD Roop-Collection AsH3(5%)流量_MQWウェル,,OK
+ICP1_All_Data,STARTTIME,APCPress.APCPress,STARTTIME,1/1/2019,1/1/2022,-,0.29,0.3,0.34,0.35,-,APC Press,ICP1 APC Press,,
+ICP1_All_Data,STARTTIME,APCPosition.APCPosition,STARTTIME,1/1/2019,1/1/2100,-,22,24,32,34,-,APC Position,ICP1 APC Position,,
+ICP1_All_Data,STARTTIME,PFC1Press.PFC1Press,STARTTIME,1/1/2019,1/1/2100,-,645,650,670,675,-,PFC1 Press,ICP1 PFC1 Press,,
+ICP1_All_Data,STARTTIME,PFC1Flow.PFC1Flow,STARTTIME,1/1/2019,1/1/2100,-,0.18,0.23,0.43,0.48,-,PFC1 Flow,ICP1 PFC1 Flow,,
+ICP1_All_Data,STARTTIME,ArFlow.ArFlow,STARTTIME,1/1/2019,1/1/2100,-,35,35.5,36.5,37,-,MFC2 Ar,ICP1 MFC2 Ar,,
+ICP1_All_Data,STARTTIME,SiCl4Flow.SiCl4Flow,STARTTIME,1/1/2019,1/1/2100,-,8.85,8.88,9.02,9.05,-,MFC8 SiCl4,ICP1 MFC8 SiCl4,,
+ICP1_All_Data,STARTTIME,AntennaPf.AntennaPf,STARTTIME,1/1/2019,1/1/2100,-,182,188,212,218,-,Antenna Pf,ICP1 Antenna Pf,,
+ICP1_All_Data,STARTTIME,AntennaPr.AntennaPr,STARTTIME,1/1/2019,1/1/2100,-,,,2,2.5,-,Antenna Pr,ICP1 Antenna Pr,,
+ICP1_All_Data,STARTTIME,BiasPf.BiasPf,STARTTIME,1/1/2019,1/1/2100,-,109,109.5,111.5,112,-,Bias Pf,ICP1 Bias Pf,,
+ICP1_All_Data,STARTTIME,BiasPr.BiasPr,STARTTIME,1/1/2019,1/1/2100,-,,,2,2.5,-,Bias Pr,ICP1 Bias Pr,,
+ICP1_All_Data,STARTTIME,BiasVpp.BiasVpp,STARTTIME,1/1/2019,1/1/2100,-,1005,1040,1180,1215,-,Bias Vpp,ICP1 Bias Vpp,,
+ICP1_All_Data,STARTTIME,Discharge.Discharge,STARTTIME,1/1/2019,1/1/2100,-,5.2,5.25,5.35,5.4,-,Discharge,ICP1 Discharge,,
+ICP1_All_Data,STARTTIME,ChamberBakeHeat.ChamberBakeHeat,STARTTIME,1/1/2019,1/1/2100,-,33.8,34.5,38.5,39.2,-,Chamber Bake Heat,ICP1 Chamber Bake Heat,,
+ICP1_All_Data,STARTTIME,HotPlateHeat.HotPlateHeat,STARTTIME,1/1/2019,1/1/2100,-,198,198.3,199.7,200,-,Hot Plate Heat,ICP1 Hot Plate Heat,,
+Dry1_15sccm_All_Data,STARTTIME,CH4Flow.CH4Flow,STARTTIME,1/1/2019,1/1/2100,-,29.8,29.9,30.1,30.2,-,CH4Flow,Dry1_15sccm CH4Flow,,
+Dry1_15sccm_All_Data,STARTTIME,O2Flow.O2Flow,STARTTIME,1/1/2019,1/1/2100,-,1.472,1.48,1.5,1.508,-,O2Flow,Dry1_15sccm O2Flow,,
+Dry1_15sccm_All_Data,STARTTIME,H2Flow.H2Flow,STARTTIME,1/1/2019,1/1/2100,-,69.3,69.5,69.9,70.1,-,H2Flow,Dry1_15sccm H2Flow,,
+Dry1_15sccm_All_Data,STARTTIME,RFPower.RFPower,STARTTIME,1/1/2019,1/1/2100,-,247,248,250,251,-,RFPower,Dry1_15sccm RFPower,,
+Dry1_15sccm_All_Data,STARTTIME,Pressure.Pressure,STARTTIME,1/1/2019,1/1/2100,-,48,48.5,50.5,51,-,Pressure,Dry1_15sccm Pressure,,
+Dry1_15sccm_All_Data,STARTTIME,InitialVdc.InitialVdc,STARTTIME,1/1/2019,1/1/2100,-,536,552,614,630,-,InitialVdc,Dry1_15sccm InitialVdc,,
+Dry1_15sccm_All_Data,STARTTIME,FinalVdc.FinalVdc,STARTTIME,1/1/2019,1/1/2100,-,536,552,614,630,-,FinalVdc,Dry1_15sccm FinalVdc,,
+Dry1_Grating_All_Data,STARTTIME,CH4Flow.CH4Flow,STARTTIME,1/1/2019,1/1/2100,-,9.7,9.8,10.2,10.3,-,CH4Flow,Dry1_Grating CH4Flow,,
+Dry1_Grating_All_Data,STARTTIME,O2Flow.O2Flow,STARTTIME,1/1/2019,1/1/2100,-,0.04,0.05,0.1,0.11,-,O2Flow,Dry1_Grating O2Flow,,
+Dry1_Grating_All_Data,STARTTIME,H2Flow.H2Flow,STARTTIME,1/1/2019,1/1/2100,-,89.3,89.4,90,90.1,-,H2Flow,Dry1_Grating H2Flow,,
+Dry1_Grating_All_Data,STARTTIME,RFPower.RFPower,STARTTIME,1/1/2019,1/1/2100,-,96,96.5,100.5,101,-,RFPower,Dry1_Grating RFPower,,
+Dry1_Grating_All_Data,STARTTIME,Pressure.Pressure,STARTTIME,1/1/2019,1/1/2100,-,38,38.6,40.4,41,-,Pressure,Dry1_Grating Pressure,,
+Dry1_Grating_All_Data,STARTTIME,InitialVdc.InitialVdc,STARTTIME,1/1/2019,1/1/2100,-,280,282,388,400,-,InitialVdc,Dry1_Grating InitialVdc,,
+Dry1_Grating_All_Data,STARTTIME,FinalVdc.FinalVdc,STARTTIME,1/1/2019,1/1/2100,-,280,282,388,400,-,FinalVdc,Dry1_Grating FinalVdc,,
+Dry3_C2F6-25sccm_All_Data,STARTTIME,C2F6Flow.C2F6Flow,STARTTIME,1/1/2019,1/1/2100,-,24.5,24.7,25.3,25.5,-,C2F6Flow,Dry3_C2F6-25sccm C2F6Flow,,
+Dry3_C2F6-25sccm_All_Data,STARTTIME,RFPower.RFPower,STARTTIME,1/1/2019,1/1/2100,-,97,98,100,101,-,RFPower,Dry3_C2F6-25sccm RFPower,,
+Dry3_C2F6-25sccm_All_Data,STARTTIME,Pressure.Pressure,STARTTIME,1/1/2019,1/1/2100,-,5.4,5.7,6.5,6.8,-,Pressure,Dry3_C2F6-25sccm Pressure,,
+Dry3_C2F6-25sccm_All_Data,STARTTIME,InitialVpp.InitialVpp,STARTTIME,1/1/2019,1/1/2100,-,500,600,1000,1100,-,InitialVpp,Dry3_C2F6-25sccm InitialVpp,,
+Dry3_C2F6-25sccm_All_Data,STARTTIME,FinalVpp.FinalVpp,STARTTIME,1/1/2019,1/1/2100,-,500,600,1000,1100,-,FinalVpp,Dry3_C2F6-25sccm FinalVpp,,
+Dry3_CHF3-10sccm_All_Data,STARTTIME,CHF3Flow.CHF3Flow,STARTTIME,1/1/2019,1/1/2100,-,9.5,9.7,10.1,10.3,-,CHF3Flow,Dry3_CHF3-10sccm CHF3Flow,,
+Dry3_CHF3-10sccm_All_Data,STARTTIME,O2Flow.O2Flow,STARTTIME,1/1/2019,1/1/2100,-,0.3,0.35,0.45,0.5,-,O2Flow,Dry3_CHF3-10sccm O2Flow,,
+Dry3_CHF3-10sccm_All_Data,STARTTIME,RFPower.RFPower,STARTTIME,1/1/2019,1/1/2100,-,97,98,100,101,-,RFPower,Dry3_CHF3-10sccm RFPower,,
+Dry3_CHF3-10sccm_All_Data,STARTTIME,Pressure.Pressure,STARTTIME,1/1/2019,1/1/2100,-,5.4,5.7,6.5,6.8,-,Pressure,Dry3_CHF3-10sccm Pressure,,
+Dry3_CHF3-10sccm_All_Data,STARTTIME,InitialVpp.InitialVpp,STARTTIME,1/1/2019,1/1/2100,-,800,900,1300,1400,-,InitialVpp,Dry3_CHF3-10sccm InitialVpp,,
+Dry3_CHF3-10sccm_All_Data,STARTTIME,FinalVpp.FinalVpp,STARTTIME,1/1/2019,1/1/2100,-,800,900,1300,1400,-,FinalVpp,Dry3_CHF3-10sccm FinalVpp,,
+Dry3_CHF3-7sccm_All_Data,STARTTIME,CHF3Flow.CHF3Flow,STARTTIME,1/1/2019,1/1/2100,-,6.5,6.7,7.1,7.3,-,CHF3Flow,Dry3_CHF3-7sccm CHF3Flow,,
+Dry3_CHF3-7sccm_All_Data,STARTTIME,O2Flow.O2Flow,STARTTIME,1/1/2019,1/1/2100,-,0.3,0.35,0.45,0.5,-,O2Flow,Dry3_CHF3-7sccm O2Flow,,
+Dry3_CHF3-7sccm_All_Data,STARTTIME,RFPower.RFPower,STARTTIME,1/1/2019,1/1/2100,-,97,98,100,101,-,RFPower,Dry3_CHF3-7sccm RFPower,,
+Dry3_CHF3-7sccm_All_Data,STARTTIME,Pressure.Pressure,STARTTIME,1/1/2019,1/1/2100,-,5.4,5.7,6.5,6.8,-,Pressure,Dry3_CHF3-7sccm Pressure,,
+Dry3_CHF3-7sccm_All_Data,STARTTIME,InitialVpp.InitialVpp,STARTTIME,1/1/2019,1/1/2100,-,800,900,1300,1400,-,InitialVpp,Dry3_CHF3-7sccm InitialVpp,,
+Dry3_CHF3-7sccm_All_Data,STARTTIME,FinalVpp.FinalVpp,STARTTIME,1/1/2019,1/1/2100,-,800,900,1300,1400,-,FinalVpp,Dry3_CHF3-7sccm FinalVpp,,
+Dry4_All_Data,STARTTIME,APCPress.APCPress,STARTTIME,1/1/2019,1/1/2100,-,4.97,4.98,5.02,5.03,-,APCPress,Dry4 APCPress,,
+Dry4_All_Data,STARTTIME,APCPressPosition.APCPressPosition,STARTTIME,1/1/2019,1/1/2100,-,9.65,9.7,10.49,10.54,-,APCPressPosition,Dry4 APCPressPosition,,
+Dry4_All_Data,STARTTIME,CF4-O2Flow.CF4-O2Flow,STARTTIME,1/1/2019,1/1/2100,-,3.97,3.98,4.02,4.03,-,CF4-O2Flow,Dry4 CF4-O2Flow,,
+Dry4_All_Data,STARTTIME,O2Flow.O2Flow,STARTTIME,1/1/2019,1/1/2100,-,59.72,59.74,59.8,59.82,-,O2Flow,Dry4 O2Flow,,
+Dry4_All_Data,STARTTIME,BiasPf.BiasPf,STARTTIME,1/1/2019,1/1/2100,-,64.97,64.98,65.02,65.03,-,BiasPf,Dry4 BiasPf,,
+Dry4_All_Data,STARTTIME,BiasPr.BiasPr,STARTTIME,1/1/2019,1/1/2100,-,,,1.05,1.35,-,BiasPr,Dry4 BiasPr,,
+Dry4_All_Data,STARTTIME,BiasVpp.BiasVpp,STARTTIME,1/1/2019,1/1/2100,-,330,335,375,380,-,BiasVpp,Dry4 BiasVpp,,
+Dry5_All_Data,STARTTIME,BiasMNC-loadPosition.BiasMNC-loadPosition,STARTTIME,1/1/2019,1/1/2100,-,53.8,58.1,74.9,79.2,-,BiasMNC-loadPosition,Dry5 BiasMNC-loadPosition,,
+Dry5_All_Data,STARTTIME,BiasMNC-tunePosition.BiasMNC-tunePosition,STARTTIME,1/1/2019,1/1/2100,-,28,30,37.6,39.6,-,BiasMNC-tunePosition,Dry5 BiasMNC-tunePosition,,
+Dry5_All_Data,STARTTIME,BiasDCProveVoltage.BiasDCProveVoltage,STARTTIME,1/1/2019,1/1/2100,-,538.6,551.6,595.6,608.6,-,BiasDCProveVoltage,Dry5 BiasDCProveVoltage,,
+Dry5_All_Data,STARTTIME,ProcessPressure.ProcessPressure,STARTTIME,1/1/2019,1/1/2100,-,49.1,49.6,50.6,51.1,-,ProcessPressure,Dry5 ProcessPressure,,
+Dry5_All_Data,STARTTIME,BiasRFPower.BiasRFPower,STARTTIME,1/1/2019,1/1/2100,-,247.8,248.8,250.8,251.8,-,BiasRFPower,Dry5 BiasRFPower,,
+Dry5_All_Data,STARTTIME,H2Flow.H2Flow,STARTTIME,1/1/2019,1/1/2100,-,69,69.5,70.5,71,-,H2Flow,Dry5 H2Flow,,
+Dry5_All_Data,STARTTIME,O2Flow.O2Flow,STARTTIME,1/1/2019,1/1/2100,-,1.65,1.675,1.725,1.75,-,O2Flow,Dry5 O2Flow,,
+Dry5_All_Data,STARTTIME,CH4Flow.CH4Flow,STARTTIME,1/1/2019,1/1/2100,-,29,29.5,30.5,31,-,CH4Flow,Dry5 CH4Flow,,
+Dry5_All_Data,STARTTIME,BiasReflectedPower.BiasReflectedPower,STARTTIME,1/1/2019,1/1/2100,-,,,2.8,3.7,-,BiasReflectedPower,Dry5 BiasReflectedPower,,
+Dry5_All_Data,STARTTIME,PendulumPosition.PendulumPosition,STARTTIME,1/1/2019,1/1/2100,-,8,9,11,12,-,PendulumPosition,Dry5 PendulumPosition,,
+Dry5_All_Data,STARTTIME,ChillerTemp.ChillerTemp,STARTTIME,1/1/2019,1/1/2100,-,29,29.4,30.6,31,-,ChillerTemp,Dry5 ChillerTemp,,
+Dry5_All_Data,STARTTIME,WallTemp.WallTemp,STARTTIME,1/1/2019,1/1/2100,-,23,25,35,37,-,WallTemp,Dry5 WallTemp,,
+Dry6_C2F6-25sccm_All_Data,STARTTIME,ValvePosition.ValvePosition,STARTTIME,1/1/2019,1/1/2100,-,29,30.5,33.5,35,-,ValvePosition,Dry6_C2F6-25sccm ValvePosition,,
+Dry6_C2F6-25sccm_All_Data,STARTTIME,C2F6Flow.C2F6Flow,STARTTIME,1/1/2019,1/1/2100,-,24.4,24.6,25.2,25.4,-,C2F6Flow,Dry6_C2F6-25sccm C2F6Flow,,
+Dry6_C2F6-25sccm_All_Data,STARTTIME,RFPower.RFPower,STARTTIME,1/1/2019,1/1/2100,-,98,99,101,102,-,RFPower,Dry6_C2F6-25sccm RFPower,,
+Dry6_C2F6-25sccm_All_Data,STARTTIME,Pressure.Pressure,STARTTIME,1/1/2019,1/1/2100,-,5.3,5.6,6.4,6.7,-,Pressure,Dry6_C2F6-25sccm Pressure,,
+Dry6_C2F6-25sccm_All_Data,STARTTIME,InitialVpp.InitialVpp,STARTTIME,1/1/2019,1/1/2100,-,675,725,825,875,-,InitialVpp,Dry6_C2F6-25sccm InitialVpp,,
+Dry6_C2F6-25sccm_All_Data,STARTTIME,FinalVpp.FinalVpp,STARTTIME,1/1/2019,1/1/2100,-,690,740,840,890,-,FinalVpp,Dry6_C2F6-25sccm FinalVpp,,
+Dry6_CHF3-10sccm_All_Data,STARTTIME,ValvePosition.ValvePosition,STARTTIME,1/1/2019,1/1/2100,-,1,1.5,2.5,3,-,ValvePosition,Dry6_CHF3-10sccm ValvePosition,,
+Dry6_CHF3-10sccm_All_Data,STARTTIME,CHF3Flow.CHF3Flow,STARTTIME,1/1/2019,1/1/2100,-,9.5,9.7,10.1,10.3,-,CHF3Flow,Dry6_CHF3-10sccm CHF3Flow,,
+Dry6_CHF3-10sccm_All_Data,STARTTIME,O2Flow.O2Flow,STARTTIME,1/1/2019,1/1/2100,-,0.4,0.45,0.55,0.6,-,O2Flow,Dry6_CHF3-10sccm O2Flow,,
+Dry6_CHF3-10sccm_All_Data,STARTTIME,RFPower.RFPower,STARTTIME,1/1/2019,1/1/2100,-,98,99,101,102,-,RFPower,Dry6_CHF3-10sccm RFPower,,
+Dry6_CHF3-10sccm_All_Data,STARTTIME,Pressure.Pressure,STARTTIME,1/1/2019,1/1/2100,-,5.3,5.6,6.4,6.7,-,Pressure,Dry6_CHF3-10sccm Pressure,,
+Dry6_CHF3-10sccm_All_Data,STARTTIME,InitialVpp.InitialVpp,STARTTIME,1/1/2019,1/1/2100,-,925,975,1075,1125,-,InitialVpp,Dry6_CHF3-10sccm InitialVpp,,
+Dry6_CHF3-10sccm_All_Data,STARTTIME,FinalVpp.FinalVpp,STARTTIME,1/1/2019,1/1/2100,-,925,975,1075,1125,-,FinalVpp,Dry6_CHF3-10sccm FinalVpp,,
+Dry6_CHF3-7sccm_All_Data,STARTTIME,ValvePosition.ValvePosition,STARTTIME,1/1/2019,1/1/2100,-,0.8,1.3,2.3,2.8,-,ValvePosition,Dry6_CHF3-7sccm ValvePosition,,
+Dry6_CHF3-7sccm_All_Data,STARTTIME,CHF3Flow.CHF3Flow,STARTTIME,1/1/2019,1/1/2100,-,6.5,6.7,7.1,7.3,-,CHF3Flow,Dry6_CHF3-7sccm CHF3Flow,,
+Dry6_CHF3-7sccm_All_Data,STARTTIME,O2Flow.O2Flow,STARTTIME,1/1/2019,1/1/2100,-,0.4,0.45,0.55,0.6,-,O2Flow,Dry6_CHF3-7sccm O2Flow,,
+Dry6_CHF3-7sccm_All_Data,STARTTIME,RFPower.RFPower,STARTTIME,1/1/2019,1/1/2100,-,98,99,101,102,-,RFPower,Dry6_CHF3-7sccm RFPower,,
+Dry6_CHF3-7sccm_All_Data,STARTTIME,Pressure.Pressure,STARTTIME,1/1/2019,1/1/2100,-,5.3,5.6,6.4,6.7,-,Pressure,Dry6_CHF3-7sccm Pressure,,
+Dry6_CHF3-7sccm_All_Data,STARTTIME,InitialVpp.InitialVpp,STARTTIME,1/1/2019,1/1/2100,-,925,975,1075,1125,-,InitialVpp,Dry6_CHF3-7sccm InitialVpp,,
+Dry6_CHF3-7sccm_All_Data,STARTTIME,FinalVpp.FinalVpp,STARTTIME,1/1/2019,1/1/2100,-,950,1000,1100,1150,-,FinalVpp,Dry6_CHF3-7sccm FinalVpp,,
+Dry7_All_Data,STARTTIME,APCPress.APCPress,STARTTIME,1/1/2019,1/1/2100,-,5.06,5.08,5.16,5.18,-,APCPress,Dry7 APCPress,,
+Dry7_All_Data,STARTTIME,APCPressPosition.APCPressPosition,STARTTIME,1/1/2019,1/1/2100,-,7.05,7.1,7.89,7.94,-,APCPressPosition,Dry7 APCPressPosition,,
+Dry7_All_Data,STARTTIME,CF4Flow.CF4Flow,STARTTIME,1/1/2019,1/1/2100,-,1.6,1.8,3.2,3.4,-,CF4Flow,Dry7 CF4Flow,,
+Dry7_All_Data,STARTTIME,O2Flow.O2Flow,STARTTIME,1/1/2019,1/1/2100,-,59.95,59.97,60.03,60.05,-,O2Flow,Dry7 O2Flow,,
+Dry7_All_Data,STARTTIME,BiasPf.BiasPf,STARTTIME,1/1/2019,1/1/2100,-,94.97,94.98,95.02,95.03,-,BiasPf,Dry7 BiasPf,,
+Dry7_All_Data,STARTTIME,BiasPr.BiasPr,STARTTIME,1/1/2019,1/1/2100,-,,,0.7,1,-,BiasPr,Dry7 BiasPr,,
+Dry7_All_Data,STARTTIME,BiasVpp.BiasVpp,STARTTIME,1/1/2019,1/1/2100,-,1120,1140,1260,1280,-,BiasVpp,Dry7 BiasVpp,,
+GRATING_EB-LER,STARTTIME,EB-LER.Average,STARTTIME,1/1/2019,1/1/2100,"HL13B4,HL13B5,HTL13B2,HTL13D1",,,,,-,回折格子形成_EB露光_LER_B4B5,回折格子形成_EB露光_LER_B4B5,,
+GRATING_EB-LER,STARTTIME,EB-LER.Average,STARTTIME,1/1/2019,1/1/2100,"HL13B7,HL13B8",,,,,-,回折格子形成_EB露光_LER_B7B8,回折格子形成_EB露光_LER_B7B8,,
+GRATING_DML-EB-LER,STARTTIME,DML_EB-LER.Average,STARTTIME,1/1/2019,1/1/2100,HL1363,,,,,-,回折格子形成_EB露光_DML_LER_HL1363,回折格子形成_EB露光_DML_LER_HL1363,,
+GRATING_DML-EB-LER,STARTTIME,DML_EB-LER.Average,STARTTIME,1/1/2019,1/1/2100,HL13BFCP,,,,,-,回折格子形成_EB露光_DML_LER_HL13BFCP,回折格子形成_EB露光_DML_LER_HL13BFCP,,
+GRATING_DML-EB-LER,STARTTIME,DML_EB-LER.Average,STARTTIME,1/1/2019,1/1/2100,-,,,,,-,回折格子形成_EB露光_DML_LER,回折格子形成_EB露光_DML_LER,,
+GRATING_EB-PITCH,STARTTIME,EB-PITCH.Average,STARTTIME,1/1/2019,1/1/2100,HL1363,,,,,-,回折格子形成_EB露光_PITCH_HL1363,回折格子形成_EB露光_PITCH_HL1363,,
+GRATING_EB-PITCH,STARTTIME,EB-PITCH.Average,STARTTIME,1/1/2019,1/1/2100,HL13BFCP,,,,,-,回折格子形成_EB露光_PITCH_HL13BFCP,回折格子形成_EB露光_PITCH_HL13BFCP,,
+GRATING_EB-PITCH,STARTTIME,EB-PITCH.Average,STARTTIME,1/1/2019,1/1/2100,"HL13B4,HL13B5,HTL13B2,HTL13D1",,,,,-,回折格子形成_EB露光_PITCH_B4B5,回折格子形成_EB露光_PITCH_B4B5,,
+GRATING_EB-PITCH,STARTTIME,EB-PITCH.Average,STARTTIME,1/1/2019,1/1/2100,"HL13B7,HL13B8",,,,,-,回折格子形成_EB露光_PITCH_B7B8,回折格子形成_EB露光_PITCH_B7B8,,
+GRATING_EB-PITCH,STARTTIME,EB-PITCH.Average,STARTTIME,1/1/2019,1/1/2100,-,,,,,-,回折格子形成_EB露光_PITCH,回折格子形成_EB露光_PITCH,,
+TEM_Ana_F1LD_B4B5,STARTTIME,InGaAsP115_GR_Ratio.Ratio4,STARTTIME,1/1/2019,1/1/2100,-,0.94,0.97,1.03,1.06,-,F1LD_B4B5_TEM_多層CHK InGaAsP1_15 GR膜厚比率,F1LD_B4B5_TEM_多層CHK InGaAsP1_15 GR膜厚比率,,
+TEM_Ana_F1LD_B4B5,STARTTIME,InP_Ratio.Ratio3,STARTTIME,1/1/2019,1/1/2100,-,0.937,0.97,1.03,1.063,-,F1LD_B4B5_TEM_多層CHK InP膜厚比率,F1LD_B4B5_TEM_多層CHK InP膜厚比率,,
+TEM_Ana_F1LD_B4B5,STARTTIME,InGaAsP103_upper_SCH_Ratio.Ratio6,STARTTIME,1/1/2019,1/1/2100,-,0.937,0.97,1.03,1.0628,-,F1LD_B4B5_TEM_多層CHK InGaAsP1.03 上SCH膜厚比率,F1LD_B4B5_TEM_多層CHK InGaAsP1.03 上SCH膜厚比率,,
+TEM_Ana_F1LD_B4B5,STARTTIME,InGaAsP_under_103_Ratio.Ratio9,STARTTIME,1/1/2019,1/1/2100,-,0.9362,0.97,1.03,1.0628,-,F1LD_B4B5_TEM_多層CHK InGaAsP 下1.03膜厚比率,F1LD_B4B5_TEM_多層CHK InGaAsP 下1.03膜厚比率,,
+TEM_Ana_F1LD_B4B5,STARTTIME,InGaAsP_Barrier_Ratio.Ratio7,STARTTIME,1/1/2019,1/1/2100,-,0.9586,0.98,1.02,1.0414,-,F1LD_B4B5_TEM_多層CHK InGaAsP(ﾊﾞﾘｱ)膜厚比率,F1LD_B4B5_TEM_多層CHK InGaAsP(ﾊﾞﾘｱ)膜厚比率,,
+TEM_Ana_F1LD_B4B5,STARTTIME,InGaAsP_Well_Ratio.Ratio8,STARTTIME,1/1/2019,1/1/2100,-,0.9586,0.983,1.017,1.0358,-,F1LD_B4B5_TEM_多層CHK InGaAsP(ｳｪﾙ)膜厚比率,F1LD_B4B5_TEM_多層CHK InGaAsP(ｳｪﾙ)膜厚比率,,
+TEM_Ana_F1LD_B4B5,STARTTIME,Active_Thickness.Thickness,STARTTIME,1/1/2019,1/1/2100,-,291.1,,,325.3,-,F1LD_B4B5_TEM_多層CHK 活性層膜厚,F1LD_B4B5_TEM_多層CHK 活性層膜厚,,
+TEM_Ana_F1LD_B7B8,STARTTIME,InGaAsP115_GR_Ratio.Ratio4,STARTTIME,1/1/2019,1/1/2100,-,0.94,0.97,1.03,1.06,-,F1LD_B7B8_TEM_多層CHK InGaAsP1_15 GR膜厚比率,F1LD_B7B8_TEM_多層CHK InGaAsP1_15 GR膜厚比率,,
+TEM_Ana_F1LD_B7B8,STARTTIME,InP_Ratio.Ratio3,STARTTIME,1/1/2019,1/1/2100,-,0.937,0.97,1.03,1.063,-,F1LD_B7B8_TEM_多層CHK InP膜厚比率,F1LD_B7B8_TEM_多層CHK InP膜厚比率,,
+TEM_Ana_F1LD_B7B8,STARTTIME,InGaAsP103_upper_SCH_Ratio.Ratio6,STARTTIME,1/1/2019,1/1/2100,-,0.937,0.97,1.03,1.0628,-,F1LD_B7B8_TEM_多層CHK InGaAsP1.03 上SCH膜厚比率,F1LD_B7B8_TEM_多層CHK InGaAsP1.03 上SCH膜厚比率,,
+TEM_Ana_F1LD_B7B8,STARTTIME,InGaAsP_under_103_Ratio.Ratio9,STARTTIME,1/1/2019,1/1/2100,-,0.9362,0.97,1.03,1.0628,-,F1LD_B7B8_TEM_多層CHK InGaAsP 下1.03膜厚比率,F1LD_B7B8_TEM_多層CHK InGaAsP 下1.03膜厚比率,,
+TEM_Ana_F1LD_B7B8,STARTTIME,InGaAsP_Barrier_Ratio.Ratio7,STARTTIME,1/1/2019,1/1/2100,-,0.9586,0.98,1.02,1.0414,-,F1LD_B7B8_TEM_多層CHK InGaAsP(ﾊﾞﾘｱ)膜厚比率,F1LD_B7B8_TEM_多層CHK InGaAsP(ﾊﾞﾘｱ)膜厚比率,,
+TEM_Ana_F1LD_B7B8,STARTTIME,InGaAsP_Well_Ratio.Ratio8,STARTTIME,1/1/2019,1/1/2100,-,0.9586,0.983,1.017,1.0358,-,F1LD_B7B8_TEM_多層CHK InGaAsP(ｳｪﾙ)膜厚比率,F1LD_B7B8_TEM_多層CHK InGaAsP(ｳｪﾙ)膜厚比率,,
+TEM_Ana_F1LD_B7B8,STARTTIME,Active_Thickness.Thickness,STARTTIME,1/1/2019,1/1/2100,-,291.1,,,325.3,-,F1LD_B7B8_TEM_多層CHK 活性層膜厚,F1LD_B7B8_TEM_多層CHK 活性層膜厚,,
+TEM_Ana_F2LD_B4B5,STARTTIME,InGaAsP115_GR_Ratio.Ratio4,STARTTIME,1/1/2019,1/1/2100,-,0.94,0.97,1.03,1.06,-,F2LD_B4B5_TEM_多層CHK InGaAsP1_15 GR膜厚比率,F2LD_B4B5_TEM_多層CHK InGaAsP1_15 GR膜厚比率,,
+TEM_Ana_F2LD_B4B5,STARTTIME,InP_Ratio.Ratio3,STARTTIME,1/1/2019,1/1/2100,-,0.94,0.97,1.03,1.06,-,F2LD_B4B5_TEM_多層CHK InP膜厚比率,F2LD_B4B5_TEM_多層CHK InP膜厚比率,,
+TEM_Ana_F2LD_B4B5,STARTTIME,InGaAsP103_upper_SCH_Ratio.Ratio6,STARTTIME,1/1/2019,1/1/2100,-,0.94,0.97,1.03,1.06,-,F2LD_B4B5_TEM_多層CHK InGaAsP1.03 上SCH膜厚比率,F2LD_B4B5_TEM_多層CHK InGaAsP1.03 上SCH膜厚比率,,
+TEM_Ana_F2LD_B4B5,STARTTIME,InGaAsP_under_103_Ratio.Ratio9,STARTTIME,1/1/2019,1/1/2100,-,0.94,0.97,1.03,1.06,-,F2LD_B4B5_TEM_多層CHK InGaAsP 下1.03膜厚比率,F2LD_B4B5_TEM_多層CHK InGaAsP 下1.03膜厚比率,,
+TEM_Ana_F2LD_B4B5,STARTTIME,InGaAsP_Barrier_Ratio.Ratio7,STARTTIME,1/1/2019,1/1/2100,-,0.96,0.98,1.02,1.04,-,F2LD_B4B5_TEM_多層CHK InGaAsP(ﾊﾞﾘｱ)膜厚比率,F2LD_B4B5_TEM_多層CHK InGaAsP(ﾊﾞﾘｱ)膜厚比率,,
+TEM_Ana_F2LD_B4B5,STARTTIME,InGaAsP_Well_Ratio.Ratio8,STARTTIME,1/1/2019,1/1/2100,-,0.966,0.983,1.017,1.034,-,F2LD_B4B5_TEM_多層CHK InGaAsP(ｳｪﾙ)膜厚比率,F2LD_B4B5_TEM_多層CHK InGaAsP(ｳｪﾙ)膜厚比率,,
+TEM_Ana_F2LD_B4B5,STARTTIME,Active_Thickness.Thickness,STARTTIME,1/1/2019,1/1/2100,-,303.1,,,337.4,-,F2LD_B4B5_TEM_多層CHK 活性層膜厚,F2LD_B4B5_TEM_多層CHK 活性層膜厚,,
+TEM_Ana_F6LD_B4B5,STARTTIME,InGaAsP115_GR_Ratio.Ratio4,STARTTIME,1/1/2019,1/1/2100,-,0.94,0.97,1.03,1.06,-,F6LD_B4B5_TEM_多層CHK InGaAsP1_15 GR膜厚比率,F6LD_B4B5_TEM_多層CHK InGaAsP1_15 GR膜厚比率,,
+TEM_Ana_F6LD_B4B5,STARTTIME,InP_Ratio.Ratio3,STARTTIME,1/1/2019,1/1/2100,-,0.94,0.97,1.03,1.06,-,F6LD_B4B5_TEM_多層CHK InP膜厚比率,F6LD_B4B5_TEM_多層CHK InP膜厚比率,,
+TEM_Ana_F6LD_B4B5,STARTTIME,InGaAsP103_upper_SCH_Ratio.Ratio6,STARTTIME,1/1/2019,1/1/2100,-,0.94,0.97,1.03,1.06,-,F6LD_B4B5_TEM_多層CHK InGaAsP1.03 上SCH膜厚比率,F6LD_B4B5_TEM_多層CHK InGaAsP1.03 上SCH膜厚比率,,
+TEM_Ana_F6LD_B4B5,STARTTIME,InGaAsP_under_103_Ratio.Ratio9,STARTTIME,1/1/2019,1/1/2100,-,0.94,0.97,1.03,1.06,-,F6LD_B4B5_TEM_多層CHK InGaAsP 下1.03膜厚比率,F6LD_B4B5_TEM_多層CHK InGaAsP 下1.03膜厚比率,,
+TEM_Ana_F6LD_B4B5,STARTTIME,InGaAsP_Barrier_Ratio.Ratio7,STARTTIME,1/1/2019,1/1/2100,-,0.96,0.98,1.02,1.04,-,F6LD_B4B5_TEM_多層CHK InGaAsP(ﾊﾞﾘｱ)膜厚比率,F6LD_B4B5_TEM_多層CHK InGaAsP(ﾊﾞﾘｱ)膜厚比率,,
+TEM_Ana_F6LD_B4B5,STARTTIME,InGaAsP_Well_Ratio.Ratio8,STARTTIME,1/1/2019,1/1/2100,-,0.966,0.983,1.017,1.034,-,F6LD_B4B5_TEM_多層CHK InGaAsP(ｳｪﾙ)膜厚比率,F6LD_B4B5_TEM_多層CHK InGaAsP(ｳｪﾙ)膜厚比率,,
+TEM_Ana_F6LD_B4B5,STARTTIME,Active_Thickness.Thickness,STARTTIME,1/1/2019,1/1/2100,-,291.1,,,325.3,-,F6LD_B4B5_TEM_多層CHK 活性層膜厚,F6LD_B4B5_TEM_多層CHK 活性層膜厚,,

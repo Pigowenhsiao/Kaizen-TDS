@@ -1,0 +1,77 @@
+SELECT * FROM(
+    SELECT
+        HDR.STARTTIME,
+        HDR.PARTNUMBER,
+        HDR.SERIALNUMBER,
+        HDR.OPERATORID,
+        HDR.BATCHNUMBER,
+        MAX(CASE TEQ.DEVICENAME WHEN 'MOCVD' THEN TEQ.DEVICENAME || TEQ.DEVICESERIALNUMBER END) AS "MOCVD",
+        OPS.OPERATIONSTEPNAME || '_' || PARAMETERNAME AS TESTSTEPS,
+        MSD.VALUE
+    FROM
+        TDSMFG.TESTHEADER           HDR,
+        TDSMFG.TESTHEADERSTEP       HDS,
+        TDSMFG.OPERATIONSTEP        OPS,
+        TDSMFG.MEASUREMENTPARAMETER MSP,
+        TDSMFG.MEASUREMENT          MSD,
+        TDSMFG.PARAMETER            PAR,
+        TDSMFG.TESTEQUIPMENT        TEQ
+    WHERE 1=1
+        AND HDR.TESTHEADERID            = HDS.TESTHEADERID
+        AND HDS.OPERATIONSTEPID         = OPS.OPERATIONSTEPID
+        AND HDS.TESTHEADERSTEPID        = MSP.TESTHEADERSTEPID
+        AND MSP.MEASUREMENTPARAMETERID  = MSD.MEASUREMENTPARAMETERID
+        AND MSP.PARAMETERID             = PAR.PARAMETERID
+        AND TEQ.TESTHEADERID(+)         = HDR.TESTHEADERID
+        AND HDR.OPERATION               = 'WG-EML'
+    GROUP BY
+        STARTTIME
+        ,PARTNUMBER
+        ,SERIALNUMBER
+        ,OPERATORID
+        ,BATCHNUMBER
+        ,OPERATIONSTEPNAME
+        ,PARAMETERNAME
+        ,VALUE
+
+)
+PIVOT(
+    MAX(VALUE) FOR TESTSTEPS IN(
+        'Thickness_Thickness_Cap' AS "Thickness_Cap",
+        'Thickness_Thickness_Core' AS "Thickness_Core",
+        'Thickness_Thickness_Total' AS "Thickness_Total",
+        'Strain_Straing_WG' AS "Straing_WG",
+        'Wavelength_Wavelength_WG' AS "Wavelength_WG",
+        'Wavelength_Wavelength_Intensity' AS "Wavelength_Intensity",
+        'Wavelength_Wavelength_FWHM' AS "Wavelength_FWHM",
+        'SORTED_DATA_STARTTIME_SORTED' AS "SORTED_DATA_STARTTIME_SORTED",
+        'SORTED_DATA_SORTNUMBER' AS "SORTED_DATA_SORTNUMBER"
+    )
+)Int_Data
+LEFT JOIN
+    (
+        SELECT
+            MAX(CASE OPERATIONSTEPNAME || '_' || PARAMETERNAME WHEN 'SORTED_DATA_LotNumber_5' THEN VALUESTRING END) AS "FIVE_SERIALNUMBER",
+            MAX(CASE OPERATIONSTEPNAME || '_' || PARAMETERNAME WHEN 'SORTED_DATA_LotNumber_9' THEN VALUESTRING END) AS "NINE_SERIALNUMBER"
+        FROM
+            TDSMFG.TESTHEADER           HDR,
+            TDSMFG.TESTHEADERSTEP       HDS,
+            TDSMFG.OPERATIONSTEP        OPS,
+            TDSMFG.PARAMETER            PAR,
+            TDSMFG.STRINGPARAMETER      STP,
+            TDSMFG.STRINGMEASUREMENT    SMM
+        WHERE 1=1
+            AND HDR.TESTHEADERID            = HDS.TESTHEADERID
+            AND HDS.OPERATIONSTEPID         = OPS.OPERATIONSTEPID
+            AND HDS.TESTHEADERSTEPID        = STP.TESTHEADERSTEPID
+            AND STP.STRINGPARAMETERID       = SMM.STRINGPARAMETERID
+            AND PAR.OPERATIONSTEPID         = OPS.OPERATIONSTEPID
+            AND PAR.PARAMETERID             = STP.PARAMETERID
+            AND HDR.OPERATION               = 'WG-EML'
+        GROUP BY
+            HDR.SERIALNUMBER
+    )String_Data
+    ON Int_Data.SERIALNUMBER = String_Data."FIVE_SERIALNUMBER"
+ORDER BY
+    Int_Data."SORTED_DATA_STARTTIME_SORTED",
+    STARTTIME

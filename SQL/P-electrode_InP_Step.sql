@@ -1,0 +1,70 @@
+SELECT * FROM (
+    SELECT
+      HDR.STARTTIME,
+      HDR.OPERATORID,
+      HDR.PARTNUMBER,
+      HDR.SERIALNUMBER,
+      TEQ.DEVICENAME || TEQ.DEVICESERIALNUMBER AS "EQUIPMENT",
+      OPS.OPERATIONSTEPNAME || '.' || PAR.PARAMETERNAME AS STEP_AND_PARAMETER,
+      MSD.VALUE
+    FROM
+        TDSMFG.TESTHEADER           HDR,
+        TDSMFG.TESTHEADERSTEP       HDS,
+        TDSMFG.OPERATIONSTEP        OPS,
+        TDSMFG.MEASUREMENTPARAMETER MSP,
+        TDSMFG.MEASUREMENT          MSD,
+        TDSMFG.PARAMETER            PAR,
+        TDSMFG.TESTEQUIPMENT        TEQ
+    WHERE 1=1
+        AND HDR.TESTHEADERID            = HDS.TESTHEADERID
+        AND HDS.OPERATIONSTEPID         = OPS.OPERATIONSTEPID
+        AND HDS.TESTHEADERSTEPID        = MSP.TESTHEADERSTEPID
+        AND MSP.MEASUREMENTPARAMETERID  = MSD.MEASUREMENTPARAMETERID
+        AND MSP.PARAMETERID             = PAR.PARAMETERID
+        AND TEQ.TESTHEADERID(+)         = HDR.TESTHEADERID
+        AND HDR.OPERATION               = 'P-electrode_InP_Step'
+)
+PIVOT(
+    MAX(VALUE) FOR STEP_AND_PARAMETER IN (
+        'Initial.Step1' AS "Initial.Step1",
+        'Initial.Step2' AS "Initial.Step2",
+        'Initial.Step3' AS "Initial.Step3",
+        'Final.Step1' AS "Final.Step1",
+        'Final.Step2' AS "Final.Step2",
+        'Final.Step3' AS "Final.Step3",
+        'Etching.Step1' AS "Etching.Step1",
+        'Etching.Step2' AS "Etching.Step2",
+        'Etching.Step3' AS "Etching.Step3",
+        'Etching.Step_Ave' AS "Etching.Step_Average",
+        'Etching.Step_3sigma' AS "Etching.Step_3sigma",
+        'SORTED_DATA.STARTTIME_SORTED' AS "SORTED_DATA.STARTTIME_SORTED",
+        'SORTED_DATA.SORTNUMBER' AS "SORTED_DATA.SORTNUMBER"
+    )
+)Int_Data
+LEFT JOIN
+    (
+        SELECT
+            MAX(CASE OPERATIONSTEPNAME || '_' || PARAMETERNAME WHEN 'SORTED_DATA_LotNumber_5' THEN VALUESTRING END) AS "FIVE_SERIALNUMBER",
+            MAX(CASE OPERATIONSTEPNAME || '_' || PARAMETERNAME WHEN 'SORTED_DATA_LotNumber_9' THEN VALUESTRING END) AS "NINE_SERIALNUMBER"
+        FROM
+            TDSMFG.TESTHEADER           HDR,
+            TDSMFG.TESTHEADERSTEP       HDS,
+            TDSMFG.OPERATIONSTEP        OPS,
+            TDSMFG.PARAMETER            PAR,
+            TDSMFG.STRINGPARAMETER      STP,
+            TDSMFG.STRINGMEASUREMENT    SMM
+        WHERE 1=1
+            AND HDR.TESTHEADERID            = HDS.TESTHEADERID
+            AND HDS.OPERATIONSTEPID         = OPS.OPERATIONSTEPID
+            AND HDS.TESTHEADERSTEPID        = STP.TESTHEADERSTEPID
+            AND STP.STRINGPARAMETERID       = SMM.STRINGPARAMETERID
+            AND PAR.OPERATIONSTEPID         = OPS.OPERATIONSTEPID
+            AND PAR.PARAMETERID             = STP.PARAMETERID
+            AND HDR.OPERATION               = 'P-electrode_InP_Step'
+        GROUP BY
+            HDR.SERIALNUMBER
+    )String_Data
+    ON Int_Data.SERIALNUMBER = String_Data."FIVE_SERIALNUMBER"
+ORDER BY
+    Int_Data."SORTED_DATA.STARTTIME_SORTED",
+    STARTTIME

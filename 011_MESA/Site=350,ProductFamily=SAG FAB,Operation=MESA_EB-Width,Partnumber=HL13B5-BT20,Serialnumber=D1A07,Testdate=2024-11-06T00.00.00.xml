@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+       <Result startDateTime="2024-11-06T00:00:00" Result="Passed">
+               <Header SerialNumber="D1A07" PartNumber="HL13B5-BT20" Operation="MESA_EB-Width" TestStation="MESA" Operator="須崎" StartTime="2024-11-06T00:00:00" Site="350" LotNumber="D1A07"/>
+
+               <TestStep Name="Width" startDateTime="2024-11-06T00:00:00" Status="Passed">
+                   <Data DataType="Numeric" Name="1" Units="um" Value="1.7472919999999998"/>
+                   <Data DataType="Numeric" Name="2" Units="um" Value="1.7317390000000001"/>
+                   <Data DataType="Numeric" Name="3" Units="um" Value="1.738228"/>
+                   <Data DataType="Numeric" Name="4" Units="um" Value="1.732666"/>
+                   <Data DataType="Numeric" Name="5" Units="um" Value="1.737095"/>
+               </TestStep>
+
+               <TestStep Name="WidthAve" startDateTime="2024-11-06T00:00:00" Status="Passed">
+                   <Data DataType="Numeric" Name="Average" Units="um" Value="1.7374040000000002"/>
+                   <Data DataType="Numeric" Name="3sigma" Units="um" Value="0.018559302451870034"/>
+               </TestStep>
+
+               <TestStep Name="Thickness" startDateTime="2024-11-06T00:00:00" Status="Passed">
+                   <Data DataType="Numeric" Name="1" Units="nm" Value="655.969"/>
+                   <Data DataType="Numeric" Name="2" Units="nm" Value="663.348"/>
+                   <Data DataType="Numeric" Name="3" Units="nm" Value="652.628"/>
+               </TestStep>
+
+               <TestStep Name="ThicknessAve" startDateTime="2024-11-06T00:00:00" Status="Passed">
+                   <Data DataType="Numeric" Name="Average" Units="nm" Value="657.315"/>
+                   <Data DataType="Numeric" Name="3sigma" Units="nm" Value="16.455864699249176"/>
+               </TestStep>
+
+               <TestStep Name="SORTED_DATA" startDateTime="2024-11-06T00:00:00" Status="Passed">
+                   <Data DataType="Numeric" Name="STARTTIME_SORTED" Units="" Value="45602.01189"/>
+                   <Data DataType="Numeric" Name="SORTNUMBER" Units="" Value="11890.0"/>
+                   <Data DataType="String" Name="LotNumber_5" Value="D1A07" CompOperation="LOG"/>
+                   <Data DataType="String" Name="LotNumber_9" Value="24JFD1A07" CompOperation="LOG"/>
+               </TestStep>
+
+               <TestEquipment>
+                   <Item DeviceName="SEM" DeviceSerialNumber="#2"/>
+                   <Item DeviceName="DEKTAK" DeviceSerialNumber="#3"/>
+               </TestEquipment>
+
+               <ErrorData/>
+               <FailureData/>
+               <Configuration/>
+       </Result>
+</Results>

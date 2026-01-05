@@ -1,0 +1,80 @@
+SELECT * FROM (
+    SELECT
+      HDR.STARTTIME,
+      HDR.OPERATORID,
+      MAX(CASE DEVICENAME WHEN 'SEM' THEN DEVICENAME || DEVICESERIALNUMBER END) AS "SEM",
+      MAX(CASE DEVICENAME WHEN 'DEKTAK' THEN DEVICENAME || DEVICESERIALNUMBER END) AS "DEKTAK",
+      HDR.PARTNUMBER,
+      HDR.SERIALNUMBER,
+      OPS.OPERATIONSTEPNAME || '.' || PAR.PARAMETERNAME AS STEP_AND_PARAMETER,
+      MSD.VALUE
+    FROM
+        TDSMFG.TESTHEADER           HDR,
+        TDSMFG.TESTHEADERSTEP       HDS,
+        TDSMFG.OPERATIONSTEP        OPS,
+        TDSMFG.MEASUREMENTPARAMETER MSP,
+        TDSMFG.MEASUREMENT          MSD,
+        TDSMFG.PARAMETER            PAR,
+        TDSMFG.TESTEQUIPMENT        TEQ
+    WHERE 1=1
+        AND HDR.TESTHEADERID            = HDS.TESTHEADERID
+        AND HDS.OPERATIONSTEPID         = OPS.OPERATIONSTEPID
+        AND HDS.TESTHEADERSTEPID        = MSP.TESTHEADERSTEPID
+        AND MSP.MEASUREMENTPARAMETERID  = MSD.MEASUREMENTPARAMETERID
+        AND MSP.PARAMETERID             = PAR.PARAMETERID
+        AND TEQ.TESTHEADERID(+)         = HDR.TESTHEADERID
+        AND HDR.OPERATION               = 'MESA_EB-Width'
+    GROUP BY
+        STARTTIME,
+        OPERATORID,
+        PARTNUMBER,
+        SERIALNUMBER,
+        OPERATIONSTEPNAME,
+        PARAMETERNAME,
+        VALUE
+)
+PIVOT(
+    MAX(VALUE) FOR STEP_AND_PARAMETER IN (
+        'Width.1' AS "Width.1",
+        'Width.2' AS "Width.2",
+        'Width.3' AS "Width.3",
+        'Width.4' AS "Width.4",
+        'Width.5' AS "Width.5",
+        'WidthAve.Average' AS "WidthAve.Average",
+        'WidthAve.3sigma' AS "WidthAve.3sigma",
+        'Thickness.1' AS "Thickness.1",
+        'Thickness.2' AS "Thickness.2",
+        'Thickness.3' AS "Thickness.3",
+        'ThicknessAve.Average' AS "ThicknessAve.Average",
+        'ThicknessAve.3sigma' AS "ThicknessAve.3sigma",
+        'SORTED_DATA.STARTTIME_SORTED' AS "SORTED_DATA.STARTTIME_SORTED",
+        'SORTED_DATA.SORTNUMBER' AS "SORTED_DATA.SORTNUMBER"
+    )
+)Int_Data
+LEFT JOIN
+    (
+        SELECT
+            MAX(CASE OPERATIONSTEPNAME || '_' || PARAMETERNAME WHEN 'SORTED_DATA_LotNumber_5' THEN VALUESTRING END) AS "FIVE_SERIALNUMBER",
+            MAX(CASE OPERATIONSTEPNAME || '_' || PARAMETERNAME WHEN 'SORTED_DATA_LotNumber_9' THEN VALUESTRING END) AS "NINE_SERIALNUMBER"
+        FROM
+            TDSMFG.TESTHEADER           HDR,
+            TDSMFG.TESTHEADERSTEP       HDS,
+            TDSMFG.OPERATIONSTEP        OPS,
+            TDSMFG.PARAMETER            PAR,
+            TDSMFG.STRINGPARAMETER      STP,
+            TDSMFG.STRINGMEASUREMENT    SMM
+        WHERE 1=1
+            AND HDR.TESTHEADERID            = HDS.TESTHEADERID
+            AND HDS.OPERATIONSTEPID         = OPS.OPERATIONSTEPID
+            AND HDS.TESTHEADERSTEPID        = STP.TESTHEADERSTEPID
+            AND STP.STRINGPARAMETERID       = SMM.STRINGPARAMETERID
+            AND PAR.OPERATIONSTEPID         = OPS.OPERATIONSTEPID
+            AND PAR.PARAMETERID             = STP.PARAMETERID
+            AND HDR.OPERATION               = 'MESA_EB-Width'
+        GROUP BY
+            HDR.SERIALNUMBER
+    )String_Data
+    ON Int_Data.SERIALNUMBER = String_Data."FIVE_SERIALNUMBER"
+ORDER BY
+    Int_Data."SORTED_DATA.STARTTIME_SORTED",
+    STARTTIME

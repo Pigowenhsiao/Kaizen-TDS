@@ -1,0 +1,74 @@
+SELECT * FROM (
+    SELECT
+      HDR.STARTTIME,
+      HDR.OPERATORID,
+      HDR.PARTNUMBER,
+      HDR.SERIALNUMBER,
+      OPS.OPERATIONSTEPNAME || '.' || PAR.PARAMETERNAME AS STEP_AND_PARAMETER,
+      MSD.VALUE
+    FROM
+        TDSMFG.TESTHEADER           HDR,
+        TDSMFG.TESTHEADERSTEP       HDS,
+        TDSMFG.OPERATIONSTEP        OPS,
+        TDSMFG.MEASUREMENTPARAMETER MSP,
+        TDSMFG.MEASUREMENT          MSD,
+        TDSMFG.PARAMETER            PAR,
+        TDSMFG.TESTEQUIPMENT        TEQ
+    WHERE 1=1
+        AND HDS.TESTHEADERID            = HDR.TESTHEADERID
+        AND HDR.OPERATIONID             = OPS.OPERATIONID
+        AND HDS.TESTHEADERSTEPID        = MSP.TESTHEADERSTEPID
+        AND MSP.MEASUREMENTPARAMETERID  = MSD.MEASUREMENTPARAMETERID
+        AND MSP.PARAMETERID             = PAR.PARAMETERID
+        AND TEQ.TESTHEADERID(+)         = HDR.TESTHEADERID
+        AND HDR.OPERATION               = 'ISO-EML_ISO_Step'
+)
+PIVOT(
+    MAX(VALUE) FOR STEP_AND_PARAMETER IN (
+        'Resist.Resist1' AS "Resist.Resist1",
+        'Resist.Resist2' AS "Resist.Resist2",
+        'Resist.Resist3' AS "Resist.Resist3",
+        'Resist.Resist4' AS "Resist.Resist4",
+        'Resist.Resist_Ave' AS "Resist.Resist_Ave",
+        'Step.Step' AS "Step_Step",
+        'Y1.Y1_1' AS "Y1.Y1_1",
+        'Y1.Y1_2' AS "Y1.Y1_2",
+        'Y1.Y1_3' AS "Y1.Y1_3",
+        'Y1.Y1_4' AS "Y1.Y1_4",
+        'Y1.Y1_Ave' AS "Y1.Y1_Ave",
+        'Y2.Y2_1' AS "Y2.Y2_1",
+        'Y2.Y2_2' AS "Y2.Y2_2",
+        'Y2.Y2_3' AS "Y2.Y2_3",
+        'Y2.Y2_4' AS "Y2.Y2_4",
+        'Y2.Y2_Ave' AS "Y2.Y2_Ave",
+        'SORTED_DATA.STARTTIME_SORTED' AS "SORTED_DATA.STARTTIME_SORTED",
+        'SORTED_DATA.SORTNUMBER' AS "SORTED_DATA.SORTNUMBER"
+    )
+)Int_Data
+LEFT JOIN
+    (
+        SELECT
+            MAX(CASE OPERATIONSTEPNAME || '_' || PARAMETERNAME WHEN 'SORTED_DATA_LotNumber_5' THEN VALUESTRING END) AS "FIVE_SERIALNUMBER",
+            MAX(CASE OPERATIONSTEPNAME || '_' || PARAMETERNAME WHEN 'SORTED_DATA_LotNumber_9' THEN VALUESTRING END) AS "NINE_SERIALNUMBER"
+        FROM
+            TDSMFG.TESTHEADER           HDR,
+            TDSMFG.TESTHEADERSTEP       HDS,
+            TDSMFG.OPERATIONSTEP        OPS,
+            TDSMFG.PARAMETER            PAR,
+            TDSMFG.STRINGPARAMETER      STP,
+            TDSMFG.STRINGMEASUREMENT    SMM
+        WHERE 1=1
+            AND HDR.TESTHEADERID            = HDS.TESTHEADERID
+            AND HDS.OPERATIONSTEPID         = OPS.OPERATIONSTEPID
+            AND HDS.TESTHEADERSTEPID        = STP.TESTHEADERSTEPID
+            AND STP.STRINGPARAMETERID       = SMM.STRINGPARAMETERID
+            AND PAR.OPERATIONSTEPID         = OPS.OPERATIONSTEPID
+            AND PAR.PARAMETERID             = STP.PARAMETERID
+            AND HDR.OPERATION               = 'ISO-EML_ISO_Step'
+        GROUP BY
+            HDR.SERIALNUMBER
+    )String_Data
+    ON Int_Data.SERIALNUMBER = String_Data."FIVE_SERIALNUMBER"
+ORDER BY
+    Int_Data."SORTED_DATA.STARTTIME_SORTED",
+    STARTTIME

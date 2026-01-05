@@ -1,0 +1,78 @@
+SELECT 
+    Int_Data.STARTTIME,
+    Int_Data.OPERATORID,
+    Int_Data.PARTNUMBER,
+    Int_Data.SERIALNUMBER,
+    String_Data."NINE_SERIALNUMBER",
+    Int_Data."SORTED_DATA.STARTTIME_SORTED",
+    Int_Data."SORTED_DATA.SORTNUMBER",
+    Int_Data.EQUIPMENT,
+    Int_Data."Step.Step1",
+    Int_Data."Step.Step2",
+    Int_Data."Step.Step3",
+    Int_Data."Step.Step4",
+    (Int_Data."Step.Step1"+Int_Data."Step.Step2"+Int_Data."Step.Step3"+Int_Data."Step.Step4")/4 AS "Step.Step_Ave"
+    FROM (
+        SELECT
+          HDR.STARTTIME,
+          HDR.OPERATORID,
+          HDR.PARTNUMBER,
+          HDR.SERIALNUMBER,
+          TEQ.DEVICENAME || TEQ.DEVICESERIALNUMBER AS EQUIPMENT,
+          OPS.OPERATIONSTEPNAME || '.' || PAR.PARAMETERNAME AS STEP_AND_PARAMETER,
+          MSD.VALUE
+        FROM
+            TDSMFG.TESTHEADER           HDR,
+            TDSMFG.TESTHEADERSTEP       HDS,
+            TDSMFG.OPERATIONSTEP        OPS,
+            TDSMFG.MEASUREMENTPARAMETER MSP,
+            TDSMFG.MEASUREMENT          MSD,
+            TDSMFG.PARAMETER            PAR,
+            TDSMFG.TESTEQUIPMENT        TEQ
+        WHERE 1=1
+            AND HDR.TESTHEADERID            = HDS.TESTHEADERID
+            AND HDS.OPERATIONSTEPID         = OPS.OPERATIONSTEPID
+            AND HDS.TESTHEADERSTEPID        = MSP.TESTHEADERSTEPID
+            AND MSP.MEASUREMENTPARAMETERID  = MSD.MEASUREMENTPARAMETERID
+            AND MSP.PARAMETERID             = PAR.PARAMETERID
+            AND TEQ.TESTHEADERID(+)         = HDR.TESTHEADERID
+            AND HDR.OPERATION               = 'TH-DML_MESA-Side_Step'
+            AND HDR.STARTTIME > '2010-01-01'
+    )
+PIVOT(
+    MAX(VALUE) FOR STEP_AND_PARAMETER IN (
+        'Step.Step1' AS "Step.Step1",
+        'Step.Step2' AS "Step.Step2",
+        'Step.Step3' AS "Step.Step3",
+        'Step.Step4' AS "Step.Step4",
+        'SORTED_DATA.STARTTIME_SORTED' AS "SORTED_DATA.STARTTIME_SORTED",
+        'SORTED_DATA.SORTNUMBER' AS "SORTED_DATA.SORTNUMBER"
+    )
+)Int_Data
+LEFT JOIN
+    (
+        SELECT
+            MAX(CASE OPERATIONSTEPNAME || '_' || PARAMETERNAME WHEN 'SORTED_DATA_LotNumber_5' THEN VALUESTRING END) AS "FIVE_SERIALNUMBER",
+            MAX(CASE OPERATIONSTEPNAME || '_' || PARAMETERNAME WHEN 'SORTED_DATA_LotNumber_9' THEN VALUESTRING END) AS "NINE_SERIALNUMBER"
+        FROM
+            TDSMFG.TESTHEADER           HDR,
+            TDSMFG.TESTHEADERSTEP       HDS,
+            TDSMFG.OPERATIONSTEP        OPS,
+            TDSMFG.PARAMETER            PAR,
+            TDSMFG.STRINGPARAMETER      STP,
+            TDSMFG.STRINGMEASUREMENT    SMM
+        WHERE 1=1
+            AND HDR.TESTHEADERID            = HDS.TESTHEADERID
+            AND HDS.OPERATIONSTEPID         = OPS.OPERATIONSTEPID
+            AND HDS.TESTHEADERSTEPID        = STP.TESTHEADERSTEPID
+            AND STP.STRINGPARAMETERID       = SMM.STRINGPARAMETERID
+            AND PAR.OPERATIONSTEPID         = OPS.OPERATIONSTEPID
+            AND PAR.PARAMETERID             = STP.PARAMETERID
+            AND HDR.OPERATION               = 'TH-DML_MESA-Side_Step'
+        GROUP BY
+            HDR.SERIALNUMBER
+    )String_Data
+    ON Int_Data.SERIALNUMBER = String_Data."FIVE_SERIALNUMBER"
+ORDER BY
+    Int_Data."SORTED_DATA.STARTTIME_SORTED",
+    STARTTIME

@@ -1,0 +1,38 @@
+SELECT * FROM (
+    SELECT
+      HDR.STARTTIME,
+      HDR.OPERATORID,
+      HDR.PARTNUMBER,
+      HDR.SERIALNUMBER,
+      TEQ.DEVICENAME || TEQ.DEVICESERIALNUMBER AS "EQUIPMENT",
+      MSD.OPERATIONSTEPNAME || '.' || MSD.PARAMETERNAME AS STEP_AND_PARAMETER,
+      MSD.VALUE
+    FROM TDSMFG.TESTHEADER_V HDR 
+	    INNER JOIN TDSMFG.MEASUREMENT_V MSD ON HDR.TESTHEADERID = MSD.TESTHEADERID
+        LEFT JOIN TDSMFG.TESTEQUIPMENT TEQ ON TEQ.TESTHEADERID = HDR.TESTHEADERID  
+    where HDR.STARTTIME BETWEEN TRUNC(SYSDATE) - CHART_PERIOD_DAYS AND TRUNC(SYSDATE)
+      AND HDR.OPERATION = 'AFM_Step_Height'
+)
+PIVOT(
+    MAX(VALUE) FOR STEP_AND_PARAMETER IN (
+		'AFM_Step_Height.Ah_L1' as "AFM_Step_Height.Ah_L1", 
+		'AFM_Step_Height.Ah_L2' as "AFM_Step_Height.Ah_L2", 
+		'AFM_Step_Height.Ah_R1' as "AFM_Step_Height.Ah_R1", 
+		'AFM_Step_Height.Ah_R2' as "AFM_Step_Height.Ah_R2", 
+		'AFM_Step_Height.Da_L1' as "AFM_Step_Height.Da_L1", 
+		'AFM_Step_Height.Da_L2' as "AFM_Step_Height.Da_L2", 
+		'AFM_Step_Height.Da_R1' as "AFM_Step_Height.Da_R1", 
+		'AFM_Step_Height.Da_R2' as "AFM_Step_Height.Da_R2", 
+		'AFM_Step_Height.Dh_L1' as "AFM_Step_Height.Dh_L1", 
+		'AFM_Step_Height.Dh_L2' as "AFM_Step_Height.Dh_L2", 
+		'AFM_Step_Height.Dh_R1' as "AFM_Step_Height.Dh_R1", 
+		'AFM_Step_Height.Dh_R2' as "AFM_Step_Height.Dh_R2", 
+		'SORTED_DATA.SORTNUMBER'       as "SORTED_DATA.SORTNUMBER",      
+		'SORTED_DATA.STARTTIME_SORTED' as "SORTED_DATA.STARTTIME_SORTED"
+    )
+)Int_Data
+where Int_Data.SERIALNUMBER NOT IN (CTQ_IGNORED_LIST)    
+and SUBSTR(Int_Data.PARTNUMBER,1,6)IN (FOCUSED_LIST)		
+ORDER BY
+    "SORTED_DATA.STARTTIME_SORTED",
+    STARTTIME

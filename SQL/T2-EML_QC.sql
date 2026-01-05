@@ -1,0 +1,79 @@
+SELECT * FROM(
+    SELECT DISTINCT
+        HDR.STARTTIME,
+        HDR.PARTNUMBER,
+        HDR.SERIALNUMBER,
+        HDR.OPERATORID,
+        HDR.BATCHNUMBER,
+        OPS.OPERATIONSTEPNAME || '_' || PARAMETERNAME AS TESTSTEPS,
+        MSD.VALUE,
+        MAX(CASE TEQ.DEVICENAME WHEN 'SEM' THEN TEQ.DEVICENAME || TEQ.DEVICESERIALNUMBER END) AS "SEM",
+        MAX(CASE TEQ.DEVICENAME WHEN 'Polaron' THEN TEQ.DEVICENAME || TEQ.DEVICESERIALNUMBER END) AS "Polaron",
+        MAX(CASE TEQ.DEVICENAME WHEN 'MOCVD' THEN TEQ.DEVICENAME || TEQ.DEVICESERIALNUMBER END) AS "MOCVD"
+    FROM
+        TDSMFG.TESTHEADER           HDR,
+        TDSMFG.TESTHEADERMISC       THM,
+        TDSMFG.TESTHEADERSTEP       HDS,
+        TDSMFG.OPERATIONSTEP        OPS,
+        TDSMFG.MEASUREMENTPARAMETER MSP,
+        TDSMFG.MEASUREMENT          MSD,
+        TDSMFG.PARAMETER            PAR,
+        TDSMFG.TESTEQUIPMENT        TEQ
+    WHERE 1=1
+        AND HDR.TESTHEADERID            = HDS.TESTHEADERID
+        AND HDS.TESTHEADERID            = THM.TESTHEADERID
+        AND HDS.OPERATIONSTEPID         = OPS.OPERATIONSTEPID
+        AND HDS.TESTHEADERSTEPID        = MSP.TESTHEADERSTEPID
+        AND MSP.MEASUREMENTPARAMETERID  = MSD.MEASUREMENTPARAMETERID
+        AND MSP.PARAMETERID             = PAR.PARAMETERID
+        AND TEQ.TESTHEADERID(+)         = HDR.TESTHEADERID
+        AND HDR.OPERATION               = 'T2-EML'
+    GROUP BY
+        STARTTIME,
+        PARTNUMBER,
+        SERIALNUMBER,
+        BATCHNUMBER,
+        OPERATORID,
+        OPERATIONSTEPNAME,
+        PARAMETERNAME,
+        VALUE
+)
+PIVOT(
+    MAX(VALUE) FOR TESTSTEPS IN(
+        'XRayDiffraction_XRayDiffraction_Strain' AS "XRayDiffraction_Strain"
+        ,'CarrierConcentration_CarrierConcentration_Clad' AS "CarrierConcentration_Clad"
+        ,'CarrierConcentration_CarrierConcentration_Contact' AS "CarrierConcentration_Contact"
+        ,'CarrierConcentration_CarrierConcentration_Minimum' AS "CarrierConcentration_Minimum"
+        ,'Thickness_Thickness_Clad' AS "Thickness_Clad"
+        ,'Thickness_Thickness_Contact' AS "Thickness_Contact"
+        ,'SORTED_DATA_STARTTIME_SORTED' AS "SORTED_DATA_STARTTIME_SORTED"
+        ,'SORTED_DATA_SORTNUMBER' AS "SORTED_DATA_SORTNUMBER"
+    )
+)Int_Data
+LEFT JOIN
+    (
+        SELECT
+            MAX(CASE OPERATIONSTEPNAME || '_' || PARAMETERNAME WHEN 'SORTED_DATA_LotNumber_5' THEN VALUESTRING END) AS "FIVE_SERIALNUMBER",
+            MAX(CASE OPERATIONSTEPNAME || '_' || PARAMETERNAME WHEN 'SORTED_DATA_LotNumber_9' THEN VALUESTRING END) AS "NINE_SERIALNUMBER"
+        FROM
+            TDSMFG.TESTHEADER           HDR,
+            TDSMFG.TESTHEADERSTEP       HDS,
+            TDSMFG.OPERATIONSTEP        OPS,
+            TDSMFG.PARAMETER            PAR,
+            TDSMFG.STRINGPARAMETER      STP,
+            TDSMFG.STRINGMEASUREMENT    SMM
+        WHERE 1=1
+            AND HDR.TESTHEADERID            = HDS.TESTHEADERID
+            AND HDS.OPERATIONSTEPID         = OPS.OPERATIONSTEPID
+            AND HDS.TESTHEADERSTEPID        = STP.TESTHEADERSTEPID
+            AND STP.STRINGPARAMETERID       = SMM.STRINGPARAMETERID
+            AND PAR.OPERATIONSTEPID         = OPS.OPERATIONSTEPID
+            AND PAR.PARAMETERID             = STP.PARAMETERID
+            AND HDR.OPERATION               = 'T2-EML'
+        GROUP BY
+            HDR.SERIALNUMBER
+    )String_Data
+    ON Int_Data.SERIALNUMBER = String_Data."FIVE_SERIALNUMBER"
+ORDER BY
+    Int_Data."SORTED_DATA_STARTTIME_SORTED",
+    STARTTIME
