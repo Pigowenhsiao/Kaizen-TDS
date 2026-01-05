@@ -823,7 +823,7 @@ def generate_pointer_xml(
         f"ProductFamily={settings.basic.product_family},"
         f"Operation={settings.basic.operation},"
         "Partnumber=UNKNOWPN,"
-        f"Serialnumber={serial_no},"
+        "Serialnumber=SN,"
         f"Testdate={now_iso}.xml"
     ).replace(":", ".")
 
@@ -846,7 +846,7 @@ def generate_pointer_xml(
     ET.SubElement(
         result,
         "Header",
-        SerialNumber=serial_no,
+        SerialNumber="SN",
         PartNumber="UNKNOWPN",
         Operation=settings.basic.operation,
         TestStation=settings.basic.test_station,
