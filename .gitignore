@@ -1,0 +1,16 @@
+# IDE
+.idea/
+.vscode/
+*.iml
+.code-workspace
+
+# Python
+__pycache__/
+*.pyc
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
