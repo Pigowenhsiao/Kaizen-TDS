@@ -324,7 +324,7 @@ def Main():
 
                     # ----- 保存するファイル名を定義 -----
                     XML_File_Name = 'Site=' + Site + ',ProductFamily=' + ProductFamily + ',Operation=' + Operation + \
-                                    ',Partnumber=' + data_dict["key_Part_Number"] + ',Serialnumber=' + data_dict["key_Serial_Number"] + \
+                                    ',Partnumber=' + data_dict["key_Part_Number"] + ',Serialnumber=SN' + \
                                     ',Testdate=' + data_dict["key_Start_Date_Time"] + '.xml'
 
                     # ----- XMLファイルの作成 -----
@@ -335,7 +335,7 @@ def Main():
                     f.write('<?xml version="1.0" encoding="utf-8"?>' + '\n' +
                             '<Results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">' + '\n' +
                             '       <Result startDateTime=' + '"' + data_dict["key_Start_Date_Time"].replace(".", ":") + '"' + ' Result="Passed">' + '\n' +
-                            '               <Header SerialNumber=' + '"' + data_dict["key_Serial_Number"] + '"' + ' PartNumber=' + '"' + data_dict["key_Part_Number"] + '"' + ' Operation=' + '"' + Operation + '"' + ' TestStation=' + '"' + TestStation + '"' + ' Operator=' + '"' + data_dict["key_Operator"] + '"' + ' StartTime=' + '"' + data_dict["key_Start_Date_Time"].replace(".", ":") + '"' + ' Site=' + '"' + Site + '"' + ' LotNumber=' + '"' + Serial_Number + '"/>' + '\n' +
+                            '               <Header SerialNumber=' + '"' + 'SN' + '"' + ' PartNumber=' + '"' + data_dict["key_Part_Number"] + '"' + ' Operation=' + '"' + Operation + '"' + ' TestStation=' + '"' + TestStation + '"' + ' Operator=' + '"' + data_dict["key_Operator"] + '"' + ' StartTime=' + '"' + data_dict["key_Start_Date_Time"].replace(".", ":") + '"' + ' Site=' + '"' + Site + '"' + ' LotNumber=' + '"' + Serial_Number + '"/>' + '\n' +
                             '\n'
                             '               <TestStep Name="Coating_MG_Reflectance" startDateTime=' + '"' + data_dict["key_Start_Date_Time"].replace(".", ":") + '"' + ' Status="Passed">' + '\n' +
                             '                   <Data DataType="String" Name="Dev" Units="AU" Value=' + '"' + str(data_dict["key_Dev"]) + '"/>' + '\n' +

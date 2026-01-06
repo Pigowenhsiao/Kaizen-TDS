@@ -12,7 +12,6 @@ import os
 import re
 import sqlite3
 import sys
-import uuid
 from dataclasses import dataclass
 from datetime import datetime, timedelta
 from logging.handlers import RotatingFileHandler
@@ -108,6 +107,7 @@ class DedupSettings:
     debug_limit_10_files: bool
     db_filter_by_mtime: bool
     db_filter_days: int
+    fill_stats_empty_with_zero: bool
 
 
 @dataclass(frozen=True)
@@ -310,6 +310,7 @@ def load_settings(ini_path: Path) -> Settings:
         debug_limit_10_files=cfg.getboolean("Dedup", "debug_limit_10_files", fallback=False),
         db_filter_by_mtime=cfg.getboolean("Dedup", "db_filter_by_mtime", fallback=False),
         db_filter_days=cfg.getint("Dedup", "db_filter_days", fallback=30),
+        fill_stats_empty_with_zero=cfg.getboolean("Dedup", "fill_stats_empty_with_zero", fallback=False),
     )
 
     waive = WaiveLengthSettings(
@@ -788,8 +789,7 @@ def make_output_csv_path(csv_dir: Path, operation: str) -> Path:
     """
     ensure_dir(csv_dir)
     ts = datetime.now().strftime("%Y_%m_%dT%H.%M.%S")
-    short = uuid.uuid4().hex[:8]
-    return csv_dir / f"{operation}_{ts}_{short}.csv"
+    return csv_dir / f"{operation}_{ts}.csv"
 
 
 def append_csv(csv_path: Path, row: Mapping[str, Any]) -> None:
@@ -867,7 +867,7 @@ def generate_pointer_xml(
         test_step,
         "Data",
         DataType="Table",
-        Name="tbl_E1_QRUN1",
+        Name="tbl_SAG_E1_QRUN",
         Value=str(csv_path),
         CompOperation="LOG",
     )
@@ -1025,6 +1025,10 @@ def build_output_row(
     # Read main data and compute stats / 主データ読込と統計計算
     df = read_main_table(file_path, settings.excel, logger)
     stats = compute_stats_for_fields(df, settings.fields, logger)
+    if settings.dedup.fill_stats_empty_with_zero:
+        for key, value in list(stats.items()):
+            if pd.isna(value):
+                stats[key] = 0
 
     # DB connection info columns removed from CSV by request / DB接続情報はCSVに出力しない
     row: Dict[str, Any] = {
