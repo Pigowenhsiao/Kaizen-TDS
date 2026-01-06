@@ -867,7 +867,7 @@ def generate_pointer_xml(
         test_step,
         "Data",
         DataType="Table",
-        Name=f"tbl_{settings.basic.operation.upper()}",
+        Name="tbl_E1_QRUN1",
         Value=str(csv_path),
         CompOperation="LOG",
     )
