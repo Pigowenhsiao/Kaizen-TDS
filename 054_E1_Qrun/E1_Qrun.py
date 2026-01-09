@@ -1025,6 +1025,7 @@ def build_output_row(
     # Read main data and compute stats / 主データ読込と統計計算
     df = read_main_table(file_path, settings.excel, logger)
     stats = compute_stats_for_fields(df, settings.fields, logger)
+    stats.pop("sigmaDeltaG_m0_5V_STD", None)
     if settings.dedup.fill_stats_empty_with_zero:
         for key, value in list(stats.items()):
             if pd.isna(value):
